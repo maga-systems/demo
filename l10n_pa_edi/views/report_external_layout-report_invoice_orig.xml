@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="add_qr_external_layout_striped" inherit_id="web.external_layout_striped">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o and o.qr_img" t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top:-5px; right:-5px; width: 140px; height: 140px; text-align: center;" alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="add_qr_external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o and o.qr_img" t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top:-5px; right:-5px; width: 140px; height: 140px; text-align: center;" alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="add_qr_external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o and o.qr_img" t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top:-5px; right:-5px; width: 140px; height: 140px; text-align: center;" alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="add_qr_external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o and o.qr_img" t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top:-5px; right:-5px; width: 140px; height: 140px; text-align: center;" alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='informations']" position="before">
+            <p style="font-size:12px;" t-if="o.l10n_pa_use_cfe" name="l10n_pa_edi_name">
+                <strong>Comprobante impreso de Factura Electrónica</strong><br/>
+                CUFE : <b><span t-field="o.l10n_pa_dgi_cufe"/></b><br/>
+                Consulte en la pagina: https://dgi-fep.mef.gob.pa/Consultas/FacturasPorCUFE<br/>
+                Protocolo de autorización : <b><span t-field="o.l10n_pa_auth_protocol_date"/></b>
+            </p>
+        </xpath>
+    </template>
+
+</odoo>

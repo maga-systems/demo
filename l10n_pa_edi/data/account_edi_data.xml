@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="edi_thefactoryhka" model="account.edi.format">
+            <field name="name">EDI (Panama)</field>
+            <field name="code">edi_thefactoryhka</field>
+        </record>
+
+    </data>
+</odoo>

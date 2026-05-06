@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_rept_account_pdf" model="ir.actions.server">
+        <field name="name">Invoice FEL - PDF</field>
+        <field name="model_id" ref="model_account_move"/>
+        <field name="binding_model_id" ref="model_account_move"/>
+        <field name="binding_type">report</field>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.get_download_invoice_pdf()</field>
+    </record>
+    <record id="action_rept_account_xml" model="ir.actions.server">
+        <field name="name">Invoice FEL - XML</field>
+        <field name="model_id" ref="model_account_move"/>
+        <field name="binding_model_id" ref="model_account_move"/>
+        <field name="binding_type">report</field>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.get_download_invoice_xml()</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,917 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_pa_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-20 18:17+0000\n"
+"PO-Revision-Date: 2022-06-20 18:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"\"600: ValidacionDeToken: Error al verificar hash\"\n"
+"    \"600: VerificacionDeHash: Digital signature is not validated\". It is usually an error on AFIP servers, to verify this we can go to the type of documents and do a Get Last Invoice, if we get an error then it is due to an AFIP error. It is usually solved within the day.\n"
+" * \"600: ValidacionDeToken: No apareció CUIT en lista de relacione\" It is likely that you has not delegated AFIP services or electronic invoice setup is not completed"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "\"Check Available AFIP PoS\" is not implemented for webservice %s"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid ""
+"\"Check Available AFIP PoS\" is not implemented in testing mode for "
+"webservice %s"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"* If you are making an invoice < 10.000 to an final consumer who has DNI as identification type you must provide the DNI number.\n"
+" * Another alternative is to set Sigd (Unidentified / daily global sale) Identification type in order to do not need to inform the Document number,\n"
+" * This also happens when you try to generate an invoice with amount greater than 1.000 to an Anonymous Final Consumer instead of one identified with DNI or CUIT.\n"
+"\n"
+"Edit the invoice and change the partner from \"Final Consumer\" to a customer with First and Last Name, document number with format 00xxxxxxxx0, where xxxxxxxx is a an eight-digit document number"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">DGI Web Services</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid ""
+"<span>\n"
+"                                Check\n"
+"                            </span>"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "AFIP WS %s not implemented"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__active
+msgid "Active"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid ""
+"Are you invoicing from another computer or system? This error could happen when a access token that is requested to AFIP has been requested multiple times and the last one requested is still valid. You will need to wait 12 hours to generate a new token and be able to connect to AFIP\n"
+"\n"
+" If not, then could be a overload of AFIP service, please wait some time and try again"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"As the message mentions, if you are making an CN/DN, it must be with the same currency as the original invoice.\n"
+"\n"
+"The only exception is the exchange rate adjustments that need to be done in ARS but taking into account that the orginal invoice must already be accepted (or rejected by the customer).\n"
+"\n"
+"We recommend you to verify if the customer has already accepted/rejected the original invoice"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_product__unspsc_code_pa_id
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_template__unspsc_code_pa_id
+msgid "CPBS"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_dgi_cufe
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_move__l10n_pa_dgi_cufe
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_payment__l10n_pa_dgi_cufe
+msgid "CUFE"
+msgstr "CUFE"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__account_move__l10n_pa_edi_status__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_checked
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_checked
+msgid "Checked"
+msgstr "Verificado"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__code
+msgid "Code"
+msgstr "Codigo"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,help:l10n_pa_edi.field_product_product__unspsc_code_pa_id
+#: model:ir.model.fields,help:l10n_pa_edi.field_product_template__unspsc_code_pa_id
+msgid "Codificación Panameña de Bienes y Servicios"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_codigoubicacion
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_codigoubicacion
+msgid "Codigo Ubicacion"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state__cu_name
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__cu_name
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__cu_name
+msgid "Codigo unificado"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuracion"
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_config_settings.py:0
+#, python-format
+msgid "Connection is available"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_customer_type__02
+msgid "Consumidor Final"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_customer_type__01
+msgid "Contribuyente"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__jurisdiction_id
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__jurisdiction_id
+msgid "Corregimiento"
+msgstr "Corregimiento"
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"Could happen that the VAT is calculated without the discount, then it throws"
+" another amount."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__country_id
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__country_id
+msgid "Country"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_res_country_state
+msgid "Country state"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__create_uid
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__create_uid
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__create_date
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__create_date
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_edi_status
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_move__l10n_pa_edi_status
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_payment__l10n_pa_edi_status
+msgid "DGI Status"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_dv
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_dv
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "DV"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "DV number"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__display_name
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__display_name
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_res_country_state_district
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__district_id
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.view_country_state_district_form
+msgid "District"
+msgstr "Distrito"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__name
+msgid "District ID"
+msgstr "Distrito ID"
+
+#. module: l10n_pa_edi
+#: model:ir.actions.act_window,name:l10n_pa_edi.action_country_state_district
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state__districts
+#: model:ir.ui.menu,name:l10n_pa_edi.menu_country_state_district_partner
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.view_country_state_district_tree
+msgid "Districts"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__district_id
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__district_id
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "Distrit"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "Domestic market -without detail- RG2485 (WSFEv1)"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "Electronic Fiscal Bond - Web Service"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "Electronic Invoice ( PA )"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "Electronic Invoice - Web Service"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_move.py:0
+#, python-format
+msgid "Electronic Invoice created successfully"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_move.py:0
+#, python-format
+msgid "Electronic Invoice with errors <b>%s</b>"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "Export -with detail- RG2758 (WSFEXv1)"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "Export Voucher - Web Service"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_customer_type__04
+msgid "Extranjero"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid "Fiscal Bond -with detail- RG2557 (WSBFE)"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"For invoices of type \"(19) FACTURAS DE EXPORTACION\" and AFIP Concept "
+"\"Products / Definitive export of goods\" it is require to sent the Incoterm"
+" infomation. Please go to Other Info Tab and select the corresponding value "
+"in the Incoterm field"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"For the invoice case, if you are trying to validate an invoice \"AFIP Concept: Service\" and the invoice currency is not ARS then the currency rate must be the one of the previous business day of the date where the invoice was issued. If the request has a date previous that the one in the invoice then the rate should be the one of previous business day of the request.\n"
+" * For the case of the Debit or Credit Notes of type \"Services\" the rate should be the same as the related invoice."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_currency.py:0
+#, python-format
+msgid "Get AFIP currency rate not implemented for webservice %s"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_customer_type__03
+msgid "Gobierno"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__id
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__id
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"If the customer belongs to a Free Zone you should give the customer CUIT number in order to continue\n"
+" * If is a Foreign Customer is possible that Odoo does not have Legal VAT/Natrual VAT configured for your customer country.\n"
+"\n"
+"\t 1. Please go to AFIP page and search for the code in the section \"Tablas del Sistema > Paises\" that is in the bottom right of the page and get the corresponding code for the country.\n"
+"\t 2. Go back to  Odoo, in the menú Sales > Settings > Address Book > Localization > Countries, activate the developer mode and add the AFIP code in the corresponding field"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"If the invoice is a a FCE, Debit Note or Credit Note it is mandatory to "
+"inform related invoices. You are probably doing an CN/DN and the \"Source\" "
+"field (in the Other Information Tab) is not defined or has a wrong value. "
+"You must indicate in that field the original invoice number without any "
+"prefix or suffix, eg \"0001-00000001\""
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"It is not a valid invoice under the Regime of Law No. 27,440, that is, you "
+"should made a FCE invoice instead of a conventional invoice. Choose a type "
+"of electronic credit invoice document (this documents containt the string "
+"MiPyME)"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"It is possible that you are making a CN/DN but you are setting a wrong value in the \"FCE: Is cancellation\" field. If the AFIP message indicates:\n"
+"\t * \"OK - Comprobante electrónico autorizado, NO rechazado por el Comprador\" it means that the \"FCE: Is cancellation\" should NOT be set.\n"
+"\t * \"OK - Comprobante electrónico autorizado pero fue rechazado por el comprador\" it means that the \"FCE: Is cancellation\" should be set."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid ""
+"It seems like the certificate has expired. Please renew your AFIP "
+"certificate"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid "It solved using \"round globally\" method in the company"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_tipo_contribuyente__2
+msgid "Juridico"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.actions.act_window,name:l10n_pa_edi.action_country_state_district_jurisdiction
+#: model:ir.model,name:l10n_pa_edi.model_res_country_state_district_jurisdiction
+#: model:ir.ui.menu,name:l10n_pa_edi.menu_country_state_district_jurisdiction_partner
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.view_country_state_district_jurisdiction_form
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.view_country_state_district_jurisdiction_tree
+msgid "Jurisdiction"
+msgstr "Corregimiento"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__name
+msgid "Jurisdiction ID"
+msgstr "Corregimiento ID"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__jurisdictions
+msgid "Jurisdictions"
+msgstr "Corregimiento"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_edi_post_time
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_move__l10n_pa_edi_post_time
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_payment__l10n_pa_edi_post_time
+msgid "Keep empty to use the current Panama central time"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_currency.py:0
+#, python-format
+msgid "Last Business Day"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa____last_update
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district____last_update
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__write_uid
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__write_uid
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__write_date
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__write_date
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district_jurisdiction__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:res.groups,name:l10n_pa_edi.group_res_country_state_city_manager
+msgid "Localization Manager"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_product_unspsc_code_pa__name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_tipo_contribuyente__1
+msgid "Natural"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_currency.py:0
+#, python-format
+msgid ""
+"No AFIP code for currency %s. Please configure the AFIP code consulting "
+"information in AFIP page"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_currency.py:0
+#, python-format
+msgid "No rate for ARS (is the base currency for AFIP)"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__account_move__l10n_pa_edi_status__not_found
+msgid "Not Found"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__account_move__l10n_pa_edi_status__undefined
+msgid "Not Synced Yet"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_tipo_identificacion__02
+msgid "Numero Tributario"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_nro_identificacion_extranjero
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_nro_identificacion_extranjero
+msgid "N° Identificacion"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_tipo_identificacion__99
+msgid "Otro"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_company__l10n_pa_ws_token_fname
+msgid "PAC password"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_company__l10n_pa_ws_user_fname
+msgid "PAC username"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_paisextranjero
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_paisextranjero
+msgid "Pais Extranjero"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.res_config_settings_view_form
+msgid "Panama Localization"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_partner__l10n_pa_edi_tipo_identificacion__01
+msgid "Pasaporte"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"Please check the next conditions:\n"
+"    * Review that the invoice total invoice is greater than the amount defined by AFIP for this type of document\n"
+"    * Review that the customer is a MiPYME"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid "Please report this error to your Odoo provider"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_config_settings.py:0
+#, python-format
+msgid "Please set a Token in order to make the test"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_config_settings.py:0
+#, python-format
+msgid "Please set a User Name in order to make the test"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_edi_post_time
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_move__l10n_pa_edi_post_time
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_payment__l10n_pa_edi_post_time
+msgid "Posted Time"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__account_move__l10n_pa_edi_status__process
+msgid "Processed"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_product_unspsc_code_pa
+msgid "Product Codes for CPBS"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model,name:l10n_pa_edi.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_config_settings__l10n_pa_ws_environment__productive
+msgid "Productive"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_dgi_qr_code
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_move__l10n_pa_dgi_qr_code
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_account_payment__l10n_pa_dgi_qr_code
+msgid "QR Code PA"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_currency.py:0
+#, python-format
+msgid "Rate:"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_edi_status
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_move__l10n_pa_edi_status
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_payment__l10n_pa_edi_status
+msgid "Refers to the status of the journal entry inside the DGI system."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_country_state_district__state_id
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "State"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__account_move__l10n_pa_edi_status__none
+msgid "State not defined"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "Tax ID"
+msgstr "RUC"
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields.selection,name:l10n_pa_edi.selection__res_config_settings__l10n_pa_ws_environment__testing
+msgid "Testing"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid "The certificate and private key do not match"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid ""
+"The certificate is not authorized (delegated) to work with this web service"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.constraint,message:l10n_pa_edi.constraint_res_country_state_name_code_uniq
+msgid "The code of the state must be unique by country !"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"The invoice has not been accepted by AFIP, please fix the errors and try "
+"again"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid "The invoice is trying to be reprocessed"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"The new RG 4919/2021 define that MiPYME document requires to inform the FCE Transmission Option. Set this one in your System Parameters creating a parameter with name \"l10n_ar_edi.fce_transmission\". Possible values are: SCA or ADC. These options means:\n"
+" * SCA - TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA\n"
+" * ADC - AGENTE DE DEPOSITO COLECTIVO"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"The number or date of the document does not correspond to the next one to be authorized.\n"
+" * The invoice date not be after the last invoice validated in AFIP.\n"
+" * Verify that the next invoice number in the Journal corresponds with the next one in AFIP\n"
+" * If AFIP Concept \"Services\" or \"Products and Services\" could be due to the Invoice Date: this one could be null or need to be in the range N-10 and N+10 days being N the date of dispatch of the authorization request.\n"
+"\n"
+"You can go to \"Consult invoice in AFIP\" menu and get the information about the last invoice."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,help:l10n_pa_edi.field_res_company__l10n_pa_ws_token_fname
+#: model:ir.model.fields,help:l10n_pa_edi.field_res_config_settings__l10n_pa_ws_token_fname
+msgid "The password used to request the seal from the PAC"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"The registration for the online exportation invoices (invoice generate from AFIP page) is different than the registration for electronic exportation invoices. Therefore you must configure this one also because you will not be able to create invoices of this type in Odoo.\n"
+"\n"
+"When configuring, you must check the option \"Factura Electrónica Exportación de Servicios\" and then \"Webservice/Facturador Plus\".\n"
+"\n"
+"View image https://www.adhoc.com.ar/web/content/162597?unique=202798c78764e1c1d31b35d46556a7947ac511e8&download=true"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid ""
+"The testing certificate is been used for another person, you can wait 10 minutes and try again or you can change the testing certificate. If this message persist you can:\n"
+"\n"
+" 1) Configure another of the demo certificates pre loaded in demo data (On Settings click the ⇒ \"Set another demo certificate\" button).\n"
+" 2) Configure your own testing certificates"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,help:l10n_pa_edi.field_res_company__l10n_pa_ws_user_fname
+#: model:ir.model.fields,help:l10n_pa_edi.field_res_config_settings__l10n_pa_ws_user_fname
+msgid "The username used to request the seal from the PAC"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/res_currency.py:0
+#, python-format
+msgid ""
+"The was an error obtaining the rate:\n"
+"\n"
+" * Code %s -  %s"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid "There was a problem with the connection to the %s webservice: %s"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_bank_statement_line__l10n_pa_dgi_qr_code
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_move__l10n_pa_dgi_qr_code
+#: model:ir.model.fields,help:l10n_pa_edi.field_account_payment__l10n_pa_dgi_qr_code
+msgid ""
+"This QR code is mandatory by the DGI in the electronic invoices when this "
+"ones are printed."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"This error could mean any of the next options\n"
+"\n"
+"   * \"Campo Tipo_doc invalido\": Fiscal bond only create invoices for partners with CUIT.\n"
+"   * \"Campo Cmp.Items.Pro_codigo_ncm invalido\": You need to sent the NCM code of all the products in the invoice. Please verify that you provide correct NCM codes in the products of the invoice to continue."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"This error is usually given if the decimal precision of product prices is greater than currency precision. The alternatives are: a) use the lowest decimal precision for product price. b) raise the decimal precision of the currency in question.\n"
+"\n"
+"After updating the precisions you must change the quantities or prices on all invoice lines in order to recomputed the amounts, save and then reset"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"This is an internal error in AFIP. Contact to your Odoo provider in order to"
+" let it know that is happening and to investigate what is going on with the "
+"AFIP service"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"This is an internal error in AFIP. Please wait a couple of minutes and try "
+"again"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid "This is the description of the observation code: \"%s\""
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_customer_type
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_customer_type
+msgid "Tipo de cliente"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_tipo_contribuyente
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_tipo_contribuyente
+msgid "Tipo de contribuyente"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_partner__l10n_pa_edi_tipo_identificacion
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_users__l10n_pa_edi_tipo_identificacion
+msgid "Tipo de identificacion"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_config_settings__l10n_pa_ws_token_fname
+msgid "Token"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_config_settings__l10n_pa_ws_user_fname
+msgid "User name"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid "Verification of Invoices (WSCDC)"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/account_journal.py:0
+#, python-format
+msgid ""
+"We receive this error trying to consult the last invoice number to AFIP:\n"
+"%s"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"We searched for the destination country of the invoice and had no AFIP code.\n"
+"\n"
+"Please enter the AFIP page and look for the code in the System Tables section > Countries found in the bottom right and look for the corresponding code.\n"
+"\n"
+" Then go to Odoo to the Sales menu > Settings > Address book > Localization > Countries, activate developer mode and add the AFIP code in the corresponding field"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/l10n_ar_afipws_connection.py:0
+#, python-format
+msgid "Webservice is down"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"You are probably wanting to cancel an invoice through an CN but the invoice "
+"has already been accepted for the client. Keep in mind that acceptance may "
+"have been \"express\" or \"tacit\" (that is , automatically accepted after "
+"30 calendar days without the client having rejected it)."
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid ""
+"You are trying to create a debit or credit note but the document type you "
+"selected does not match with the original one"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/afip_errors.py:0
+#, python-format
+msgid "You may not have completed the Bank Account field on the invoice"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.l10n_pa_edi_partner_extra_data_form
+msgid "e.g. BE0477472701"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model:ir.model.fields,field_description:l10n_pa_edi.field_res_config_settings__l10n_pa_ws_environment
+msgid "environment"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: code:addons/l10n_pa_edi/models/product_template.py:0
+#, python-format
+msgid ""
+"it seems like the product \"%s\" has no valid NCM Code.\n"
+"\n"
+"Please set a valid NCM code to continue. You can go to AFIP page and review the list of available NCM codes"
+msgstr ""
+
+#. module: l10n_pa_edi
+#: model_terms:ir.ui.view,arch_db:l10n_pa_edi.res_config_settings_view_form
+msgid "⇒ Test Connections"
+msgstr ""

@@ -1,0 +1,88 @@
+id,country_id:id,state_id,name,cu_name
+district_pa_1,base.pa,state_pa_1,BOCAS DEL TORO,1
+district_pa_2,base.pa,state_pa_1,CHANGUINOLA,2
+district_pa_3,base.pa,state_pa_1,CHIRIQUI GRANDE,3
+district_pa_4,base.pa,state_pa_2,AGUADULCE,1
+district_pa_5,base.pa,state_pa_2,ANTON,2
+district_pa_6,base.pa,state_pa_2,LA PINTADA,3
+district_pa_7,base.pa,state_pa_2,NATA,4
+district_pa_8,base.pa,state_pa_2,OLA,5
+district_pa_9,base.pa,state_pa_2,PENONOME,6
+district_pa_10,base.pa,state_pa_3,COLON,1
+district_pa_11,base.pa,state_pa_3,CHAGRES,2
+district_pa_12,base.pa,state_pa_3,DONOSO,3
+district_pa_13,base.pa,state_pa_3,PORTOBELO,4
+district_pa_14,base.pa,state_pa_3,SANTA ISABEL,5
+district_pa_15,base.pa,state_pa_4,ALANJE,1
+district_pa_16,base.pa,state_pa_4,BARU,2
+district_pa_17,base.pa,state_pa_4,BOQUERON,3
+district_pa_18,base.pa,state_pa_4,BOQUETE,4
+district_pa_19,base.pa,state_pa_4,BUGABA,5
+district_pa_20,base.pa,state_pa_4,DAVID,6
+district_pa_21,base.pa,state_pa_4,DOLEGA,7
+district_pa_22,base.pa,state_pa_4,GUALACA,8
+district_pa_23,base.pa,state_pa_4,REMEDIOS,9
+district_pa_24,base.pa,state_pa_4,RENACIMIENTO,10
+district_pa_25,base.pa,state_pa_4,SAN FELIX,11
+district_pa_26,base.pa,state_pa_4,SAN LORENZO,12
+district_pa_27,base.pa,state_pa_4,TOLE,13
+district_pa_28,base.pa,state_pa_5,CHEPIGANA,1
+district_pa_29,base.pa,state_pa_5,PINOGANA,2
+district_pa_30,base.pa,state_pa_5,CEMACO,3
+district_pa_31,base.pa,state_pa_5,SAMBU,4
+district_pa_32,base.pa,state_pa_6,CHITRE,1
+district_pa_33,base.pa,state_pa_6,LAS MINAS,2
+district_pa_34,base.pa,state_pa_6,LOS POZOS,3
+district_pa_35,base.pa,state_pa_6,OCU,4
+district_pa_36,base.pa,state_pa_6,PARITA,5
+district_pa_37,base.pa,state_pa_6,PESE,6
+district_pa_38,base.pa,state_pa_6,SANTA MARIA,7
+district_pa_39,base.pa,state_pa_7,GUARARE,1
+district_pa_40,base.pa,state_pa_7,LAS TABLAS,2
+district_pa_41,base.pa,state_pa_7,LOS SANTOS,3
+district_pa_42,base.pa,state_pa_7,MACARACAS,4
+district_pa_43,base.pa,state_pa_7,PEDASI,5
+district_pa_44,base.pa,state_pa_7,POCRI,6
+district_pa_45,base.pa,state_pa_7,TONOSI,7
+district_pa_46,base.pa,state_pa_8,ARRAIJAN,1
+district_pa_47,base.pa,state_pa_8,BALBOA,2
+district_pa_48,base.pa,state_pa_8,CAPIRA,3
+district_pa_49,base.pa,state_pa_8,CHAME,4
+district_pa_50,base.pa,state_pa_8,CHEPO,5
+district_pa_51,base.pa,state_pa_8,CHIMAN,6
+district_pa_52,base.pa,state_pa_8,CHORRERA,7
+district_pa_53,base.pa,state_pa_8,PANAMA,8
+district_pa_54,base.pa,state_pa_8,SAN CARLOS,9
+district_pa_55,base.pa,state_pa_8,SAN MIGUELITO,10
+district_pa_56,base.pa,state_pa_8,TABOGA,11
+district_pa_57,base.pa,state_pa_9,ATALAYA,1
+district_pa_58,base.pa,state_pa_9,CALOBRE,2
+district_pa_59,base.pa,state_pa_9,CAÑAZAS,3
+district_pa_60,base.pa,state_pa_9,LA MESA,4
+district_pa_61,base.pa,state_pa_9,LAS PALMAS,5
+district_pa_62,base.pa,state_pa_9,MONTIJO,6
+district_pa_63,base.pa,state_pa_9,RIO DE JESUS,7
+district_pa_64,base.pa,state_pa_9,SAN FRANCISCO,8
+district_pa_65,base.pa,state_pa_9,SANTA FE,9
+district_pa_66,base.pa,state_pa_9,SANTIAGO,10
+district_pa_67,base.pa,state_pa_9,SONA,11
+district_pa_68,base.pa,state_pa_10,SAN BLAS,1
+district_pa_69,base.pa,state_pa_11,CEMACO,1
+district_pa_70,base.pa,state_pa_11,SAMBU,2
+district_pa_71,base.pa,state_pa_12,BESIKO,1
+district_pa_72,base.pa,state_pa_12,KANKINTU,2
+district_pa_73,base.pa,state_pa_12,KUSAPIN,3
+district_pa_74,base.pa,state_pa_12,MIRONO,4
+district_pa_75,base.pa,state_pa_12,MUNA,5
+district_pa_76,base.pa,state_pa_12,NOLE DULIMA,6
+district_pa_77,base.pa,state_pa_12,ÑURUM,7
+district_pa_78,base.pa,state_pa_12,JIRONDAL,8
+district_pa_79,base.pa,state_pa_12,SANTA CATALINA O CALOVEBORA,9
+district_pa_80,base.pa,state_pa_13,ARRAIJAN,1
+district_pa_81,base.pa,state_pa_13,CAPIRA,2
+district_pa_82,base.pa,state_pa_13,CHAME,3
+district_pa_83,base.pa,state_pa_13,LA CHORRERA,4
+district_pa_84,base.pa,state_pa_13,SAN CARLOS,5
+district_pa_85,base.pa,state_pa_4,TIERRAS ALTAS,0
+district_pa_86,base.pa,state_pa_5,SANTA FE,0
+district_pa_87,base.pa,state_pa_8,BALBOA,2

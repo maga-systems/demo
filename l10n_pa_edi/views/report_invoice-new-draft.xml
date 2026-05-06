@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Este encabezado por plantilla no se necesita, ya esta incluido en un bloque de information abajo
+
+    <template id="add_qr_external_layout_striped" inherit_id="web.external_layout_striped">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <strong style="font-size: 12px;">
+                EMISOR
+            </strong><br/>
+            <strong>Nombre:</strong>
+                <span t-field="o.company_id.name"/>
+            <br/>
+
+            <strong>RUC:</strong>
+            <span t-field="o.company_id.vat"/><br/>
+
+            <span t-if="o.company_id.street">
+                Dirección: <span t-field="o.company_id.street"/><br/>
+            </span>
+
+            <span t-if="o.company_id.state_id">
+                <span t-field="o.company_id.state_id.name"/>
+            </span>
+            <span t-if="o.company_id.country_id">
+                , <span t-field="o.company_id.country_id.name"/>
+            </span><br/>
+
+            <span t-if="o.company_id.phone">
+                <strong>Tel:</strong> <span t-field="o.company_id.phone"/><br/>
+            </span>
+
+            <span t-if="o.company_id.email">
+                <strong>Email:</strong> <span t-field="o.company_id.email"/>
+            </span>
+        </xpath>
+    </template>
+
+
+    <template id="add_qr_external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o and o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o.qr_img"
+                         t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top: 15mm; right: 10mm; width:140px; height:140px;"
+                         alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="add_qr_external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o and o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o.qr_img"
+                         t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top: 15mm; right: 10mm; width:140px; height:140px;"
+                         alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="add_qr_external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+            <t t-if="o and o._name == 'account.move' and o.l10n_pa_use_cfe">
+                <div name="qr_code">
+                    <img t-if="o.qr_img"
+                         t-att-src="image_data_uri(o.qr_img)"
+                         style="position:absolute; top: 15mm; right: 10mm; width:140px; height:140px;"
+                         alt="QR"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+-->
+<!-- Crear un layout custom para facturas de Panamá -->
+<template id="external_layout_pa_invoice">
+    <t t-call="web.html_container">
+        <t t-set="body_classname" t-value="'o_account_reports_page'"/>
+        <div class="header">
+            <div class="row" style="margin: 0 0 20px 0; min-height: 60px;">
+                <div class="col-3">
+                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
+                         style="max-height: 50px; display: block;" alt="Logo"/>
+                </div>
+                <div class="col-9 text-end" style="font-size:20px;">
+                    <strong>DGI - Comprobante Auxiliar de Factura Electrónica</strong><br/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Título del documento CON margin-top -->
+        <div style="margin-top: 20px; margin-bottom: 10px;">
+            <h2 t-if="layout_document_title">
+                <span t-out="layout_document_title"/>
+            </h2>
+        </div>
+
+        <div class="article o_report_layout_standard">
+            <t t-raw="0"/>
+        </div>
+
+        <div class="footer o_standard_footer" style="margin-top: 10px;">
+            <div class="text-center" style="border-top: 1px solid black; font-size: 9px;">
+                <span t-field="o.company_id.name"/>
+                <span t-if="o.company_id.country_id"> - <span t-field="o.company_id.country_id.name"/></span>
+                <span t-if="o.company_id.email"> - <span t-field="o.company_id.email"/></span>
+                <!-- CAMBIO 4: Texto pie de página PAC -->
+                <t t-if="o and o.company_id.l10n_pa_ws_environment_id and o.company_id.l10n_pa_ws_environment_id.pac_footer_text">
+                    <div><t t-esc="o.company_id.l10n_pa_ws_environment_id.pac_footer_text"/></div>
+                </t>
+                <div class="text-muted">
+                    Page <span class="page"/> of <span class="topage"/>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+    <!-- ============================================ -->
+    <!-- MODIFICAR el reporte de factura             -->
+    <!-- ============================================ -->
+<template id="report_invoice_document" inherit_id="account.report_invoice_document">
+    <!-- ============================================ -->
+    <!-- USAR nuestro layout custom en lugar del estándar -->
+    <!-- ============================================ -->
+    <xpath expr="//t[@t-call='web.external_layout']" position="attributes">
+        <attribute name="t-call">l10n_pa_edi.external_layout_pa_invoice</attribute>
+    </xpath>
+        <!-- ============================================ -->
+        <!-- OCULTAR el bloque de direcciones original    -->
+        <!-- ============================================ -->
+        <xpath expr="//div[@class='row'][1]" position="replace">
+            <div class="row" style="display: none;"/>
+        </xpath>
+
+        <!-- ============================================ -->
+        <!-- OCULTAR el div informations (fechas, etc)    -->
+        <!-- ============================================ -->
+        <xpath expr="//div[@id='informations']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <!-- ============================================ -->
+        <!-- BLOQUE EMISOR - Información de la empresa    -->
+        <!-- ============================================ -->
+        <xpath expr="//div[hasclass('page')]/div[1]" position="before">
+            <!-- Para subir o bajar este bloque, ajusta el margin top -->
+            <div class="row mb-3" style="border: 1px solid #dddddd; padding: 8px; margin: 80px 0 10px 0;">
+                <div class="col-6" style="font-size: 10px;">
+                    <strong style="font-size: 12px;">
+                        EMISOR
+                    </strong><br/>
+                    <strong>Nombre:</strong>
+                        <span t-field="o.company_id.name"/>
+                    <br/>
+
+                    <strong>RUC:</strong>
+                    <span t-field="o.company_id.vat"/><br/>
+
+                    <span t-if="o.company_id.street">
+                        <strong>Dirección:</strong> <span t-field="o.company_id.street"/><br/>
+                    </span>
+
+                    <span t-if="o.company_id.state_id">
+                        <span t-field="o.company_id.state_id.name"/>
+                    </span>
+                    <span t-if="o.company_id.country_id">
+                        , <span t-field="o.company_id.country_id.name"/>
+                    </span><br/>
+
+                    <span t-if="o.company_id.phone">
+                        <strong>Tel:</strong> <span t-field="o.company_id.phone"/><br/>
+                    </span>
+
+                    <span t-if="o.company_id.email">
+                        <strong>Email:</strong> <span t-field="o.company_id.email"/>
+                    </span>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- BLOQUE RECEPTOR - Información del cliente    -->
+                <!-- ============================================ -->
+                <div class="col-6" style="font-size: 10px;">
+                    <t t-set="tipo_cliente" t-value="o.partner_id.l10n_pa_edi_customer_type"/>
+
+                    <strong style="font-size: 12px;">
+                            RECEPTOR
+                    </strong><br/>
+
+                    <strong>Nombre:</strong>
+                    <span t-field="o.partner_id.name"/><br/>
+
+                    <!-- RUC + DV: Solo para tipos 01 y 03 -->
+                    <span t-if="tipo_cliente in ['01', '03']">
+                        <strong>RUC:</strong>
+                        <span t-field="o.partner_id.vat"/>
+                        <span t-if="o.partner_id.l10n_pa_edi_dv">
+                            DV <span t-field="o.partner_id.l10n_pa_edi_dv"/>
+                        </span><br/>
+                    </span>
+
+                    <!-- Identificación Extranjero: Solo para tipo 04 -->
+                    <span t-if="tipo_cliente == '04'">
+                        <strong>
+                            <span t-if="o.partner_id.l10n_pa_edi_tipo_identificacion == '01'">Pasaporte:</span>
+                            <span t-elif="o.partner_id.l10n_pa_edi_tipo_identificacion == '02'">NIT:</span>
+                            <span t-else="">Identificación:</span>
+                        </strong>
+                        <span t-field="o.partner_id.l10n_pa_edi_nro_identificacion_extranjero"/><br/>
+
+                        <strong>País:</strong>
+                        <span t-field="o.partner_id.l10n_pa_edi_paisextranjero.name"/><br/>
+                    </span>
+
+                    <!-- Dirección: Para tipos 01, 02 y 03 -->
+                    <strong>Dirección:</strong>
+                    <span t-if="tipo_cliente in ['01', '02', '03']">
+                        <span t-if="o.partner_id.street">
+                            <span t-field="o.partner_id.street"/>,
+                        </span>
+
+                        <span t-if="o.partner_id.street2">
+                            <span t-field="o.partner_id.street2"/>
+                        </span>
+                        <br/>
+                        <!--
+                        <span t-if="o.partner_id.district_id">
+                            <span t-field="o.partner_id.district_id.name"/>,
+                        </span>
+                        <span t-if="o.partner_id.state_id">
+                            <span t-field="o.partner_id.state_id.name"/>
+                        </span><br/>
+                        <span t-if="o.partner_id.l10n_pa_edi_codigoubicacion">
+                            <strong>Cód. Ubicación:</strong>
+                            <span t-field="o.partner_id.l10n_pa_edi_codigoubicacion"/><br/>
+                        </span>
+                        -->
+                    </span>
+
+                    <span t-if="o.partner_id.phone">
+                        <strong>Tel:</strong> <span t-field="o.partner_id.phone"/><br/>
+                    </span>
+
+                    <span t-if="o.partner_id.email">
+                        <strong>Email:</strong> <span t-field="o.partner_id.email"/>
+                    </span>
+                    <br/>
+                    <!-- Tipo de Contribuyente -->
+                   <strong style="font-size: 10px;">Tipo:</strong>
+                        <span t-field="o.partner_id.l10n_pa_edi_customer_type"/>
+                    <!--
+                        <span t-if="tipo_cliente == '01'">CONTRIBUYENTE</span>
+                        <span t-elif="tipo_cliente == '02'">CONSUMIDOR FINAL</span>
+                        <span t-elif="tipo_cliente == '03'">ENTIDAD GUBERNAMENTAL</span>
+                        <span t-elif="tipo_cliente == '04'">CLIENTE EXTRANJERO</span>
+                        <span t-else="">CLIENTE</span>
+                    -->
+                    <!-- Natural o Juridico -->
+                    <span t-if="tipo_cliente in ['01', '02', '03'] and o.partner_id.l10n_pa_edi_tipo_contribuyente">
+                        <strong>/</strong>
+                        <span t-if="o.partner_id.l10n_pa_edi_tipo_contribuyente == '1'">Natural</span>
+                        <span t-else="">Jurídico</span><br/>
+                    </span>
+                </div>
+            </div>
+        </xpath>
+
+    <!-- ========================================================= -->
+    <!-- HEADER FEL PANAMÁ + QR (YA FUNCIONA, NO SE TOCA)          -->
+    <!-- ========================================================= -->
+    <xpath expr="//div[@id='informations']" position="before">
+        <t t-if="o and o.l10n_pa_use_cfe">
+            <div style="width:100%; font-size:10px; color:#6c757d; border:1px solid #dddddd;margin-bottom:20px;">
+                <!-- Columna izquierda: float -->
+                <div class="row" style="float:left; width:calc(100% - 160px); padding:10px;">
+                    <!-- SUBTABLA SUPERIOR: 2 columnas -->
+                        <!-- Para subir o bajar este bloque, ajusta el margin top -->
+                    <!--
+                    <div class="col-3" >
+                        <strong style="font-size: 12px;">
+                            EMISOR
+                        </strong><br/>
+                        <strong>Nombre:</strong>
+                            <span t-field="o.company_id.name"/>
+                        <br/>
+
+                        <strong>RUC:</strong>
+                        <span t-field="o.company_id.vat"/><br/>
+
+                        <span t-if="o.company_id.street">
+                            <strong>Dirección:</strong> <span t-field="o.company_id.street"/><br/>
+                        </span>
+
+                        <span t-if="o.company_id.state_id">
+                            <span t-field="o.company_id.state_id.name"/>
+                        </span>
+                        <span t-if="o.company_id.country_id">
+                            , <span t-field="o.company_id.country_id.name"/>
+                        </span><br/>
+
+                        <span t-if="o.company_id.phone">
+                            <strong>Tel:</strong> <span t-field="o.company_id.phone"/><br/>
+                        </span>
+
+                        <span t-if="o.company_id.email">
+                            <strong>Email:</strong> <span t-field="o.company_id.email"/>
+                        </span><br/>
+                    </div>
+                    <!- ============================================ -->
+                    <!-- BLOQUE RECEPTOR - Información del cliente    -->
+                    <!-- ============================================ -->
+                    <div class="col-3">
+                        <t t-set="tipo_cliente" t-value="o.partner_id.l10n_pa_edi_customer_type"/>
+
+                        <strong style="font-size: 12px;">
+                                RECEPTOR
+                        </strong><br/>
+
+                        <strong>Nombre:</strong>
+                        <span t-field="o.partner_id.name"/><br/>
+
+                        <!-- RUC + DV: Solo para tipos 01 y 03 -->
+                        <span t-if="tipo_cliente in ['01', '03']">
+                            <strong>RUC:</strong>
+                            <span t-field="o.partner_id.vat"/>
+                            <span t-if="o.partner_id.l10n_pa_edi_dv">
+                                DV <span t-field="o.partner_id.l10n_pa_edi_dv"/>
+                            </span><br/>
+                        </span>
+
+                        <!-- Identificación Extranjero: Solo para tipo 04 -->
+                        <span t-if="tipo_cliente == '04'">
+                            <strong>
+                                <span t-if="o.partner_id.l10n_pa_edi_tipo_identificacion == '01'">Pasaporte:</span>
+                                <span t-elif="o.partner_id.l10n_pa_edi_tipo_identificacion == '02'">NIT:</span>
+                                <span t-else="">Identificación:</span>
+                            </strong>
+                            <span t-field="o.partner_id.l10n_pa_edi_nro_identificacion_extranjero"/><br/>
+
+                            <strong>País:</strong>
+                            <span t-field="o.partner_id.l10n_pa_edi_paisextranjero.name"/><br/>
+                        </span>
+
+                        <!-- Dirección: Para tipos 01, 02 y 03 -->
+                        <strong>Dirección:</strong>
+                        <span t-if="tipo_cliente in ['01', '02', '03']">
+                            <span t-if="o.partner_id.street">
+                                <span t-field="o.partner_id.street"/>,
+                            </span>
+
+                            <span t-if="o.partner_id.street2">
+                                <span t-field="o.partner_id.street2"/>
+                            </span>
+                            <br/>
+
+                        </span>
+
+                        <span t-if="o.partner_id.phone">
+                            <strong>Tel:</strong> <span t-field="o.partner_id.phone"/><br/>
+                        </span>
+
+                        <span t-if="o.partner_id.email">
+                            <strong>Email:</strong> <span t-field="o.partner_id.email"/>
+                        </span>
+                        <br/>
+                        <!-- Tipo de Contribuyente -->
+                       <strong style="font-size: 10px;">Tipo:</strong>
+                            <span t-field="o.partner_id.l10n_pa_edi_customer_type"/>
+
+                        <!-- Natural o Juridico -->
+                        <span t-if="tipo_cliente in ['01', '02', '03'] and o.partner_id.l10n_pa_edi_tipo_contribuyente">
+                            <strong>/</strong>
+                            <span t-if="o.partner_id.l10n_pa_edi_tipo_contribuyente == '1'">Natural</span>
+                            <span t-else="">Jurídico</span><br/>
+                        </span>
+                    </div>
+                    <div class="col-6" style="border:0; border-collapse:collapse; margin-bottom:6px; background:transparent;">
+                        <b>Tipo de Documento: </b><span t-field="o.l10n_pa_edi_tipo_documento_desc"/><br/>
+                        <b>Numero: </b><span t-field="o.l10n_pa_no_doc_factura"/><br/>
+                        <b>Sucursal/Punto: </b><span t-field="o.company_id.def_fields_part.puntofacturacionfiscal"/><br/>
+                        <b>Fecha de emisión: </b><span t-esc="o.l10n_pa_auth_dgi_reception_date_fmt"/><br/>
+
+                        <strong> </strong><br/>
+                        Consulte en la página:
+                        https://dgi-fep.mef.gob.pa/Consultas/FacturasPorCUFE<br/>
+                        Usando el CUFE:<br/>
+                        <b><span t-field="o.l10n_pa_dgi_cufe"/></b><br/>
+                        Protocolo de autorización:<br/>
+                        <b><span t-field="o.l10n_pa_auth_protocol_date"/></b><br/>
+
+                    </div>
+                </div>
+
+                <!-- Columna derecha: float -->
+                <div style="float:right; width:150px; text-align:right;">
+                    <img t-if="o.qr_img"
+                         t-att-src="image_data_uri(o.qr_img)"
+                         style="width:140px; height:140px;"
+                         alt="QR"/>
+                </div>
+
+                <!-- Clear float -->
+                <div style="clear:both;"></div>
+            </div>
+        </t>
+    </xpath>
+    <!-- Fijar ancho de tabla principal -->
+    <xpath expr="//table[contains(@class,'o_main_table')]" position="attributes">
+        <attribute name="style">table-layout: fixed; width: 100%;</attribute>
+    </xpath>
+    <!-- ===================== -->
+    <!-- HEADER DE LA TABLA    -->
+    <!-- ===================== -->
+    <xpath expr="//table[contains(@class,'o_main_table')]//thead"
+           position="replace">
+        <thead>
+            <tr style="font-size:12px;border:1px solid #ddd;">
+                <th style="width: 10%;border:1px solid #ddd;">Cod</th>
+                <th style="width: 30%;border:1px solid #ddd;">Descripcion</th>
+                <th class="text-end" style="width: 10%;border:1px solid #ddd;">Cantidad</th>
+                <th style="width: 10%;border:1px solid #ddd;">Unidad</th>
+                <th class="text-end" style="width: 12%;border:1px solid #ddd;">Precio/Unidad</th>
+                <th class="text-end" style="width: 13%;border:1px solid #ddd;">Impuestos</th>
+                <th class="text-end" style="width: 15%;border:1px solid #ddd;">Total</th>
+            </tr>
+        </thead>
+    </xpath>
+    <!-- ========================================================= -->
+    <!-- REEMPLAZO CORRECTO DE LAS LÍNEAS (ODOO 18 REAL)            -->
+    <!-- ========================================================= -->
+    <xpath expr="//table[contains(@class,'o_main_table')]//tbody//t[@t-foreach='lines']"
+           position="replace">
+
+        <t t-foreach="lines" t-as="line">
+            <tr style="font-size:10px;border:1px solid #ddd;">
+                <td style="border:1px solid #ddd;">
+                    <span t-field="line.product_id.default_code"/>
+                </td>
+                <td style="border:1px solid #ddd;">
+                    <span t-field="line.name"/>
+                </td>
+                <td class="text-end" style="border:1px solid #ddd;">
+                    <span t-field="line.quantity"/>
+                </td>
+                <td style="border:1px solid #ddd;" >
+                    <span t-field="line.product_uom_id.name"/>
+                </td>
+                <td class="text-end" style="border:1px solid #ddd;">
+                    <span t-field="line.price_unit"/>
+                </td>
+                <td class="text-end" style="border:1px solid #ddd;">
+                    <span t-esc="', '.join(t.name for t in line.tax_ids)"/>
+                </td>
+                <td class="text-end" style="border:1px solid #ddd;">
+                    <span t-field="line.price_total"/>
+                </td>
+            </tr>
+        </t>
+
+    </xpath>
+    <xpath expr="//div[@id='total']" position="attributes">
+        <attribute name="style">font-size:10px;border:1px solid #ddd;</attribute>
+    </xpath>
+
+    <!-- ========================================================= -->
+    <!-- MEDIOS DE PAGO Y PLAZOS - ANCHO COMPLETO DESPUÉS DE TABLA -->
+    <!-- ========================================================= -->
+    <xpath expr="//div[@id='total']/parent::*" position="after">
+        <t t-if="o.l10n_pa_use_cfe and o.dgi_payment_ids">
+                        <div style="width:100%; font-size:10px; margin-top:15px; page-break-inside:avoid; overflow:hidden;">
+                <!-- COLUMNA IZQUIERDA: MEDIOS DE PAGO -->
+                <div style="float:left; width:49%; padding-right:5px; box-sizing:border-box;">
+                    <h6 style="font-size:11px; font-weight:bold; margin-bottom:5px;">Medios de Pago</h6>
+                    <table class="table table-sm table-bordered" style="margin-bottom:0; width:100%;">
+                        <thead>
+                            <tr style="background-color:#f8f9fa;">
+                                <th style="width:40%;">Tipo</th>
+                                <th class="text-end" style="width:25%;">B/. Valor</th>
+                                <th style="width:35%;">Observación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="o.dgi_payment_ids" t-as="pago">
+                                <td>
+                                    <t t-if="pago.forma_pago_fact == '01'">Crédito</t>
+                                    <t t-elif="pago.forma_pago_fact == '02'">Efectivo</t>
+                                    <t t-elif="pago.forma_pago_fact == '03'">Tarjeta Crédito</t>
+                                    <t t-elif="pago.forma_pago_fact == '04'">Tarjeta Débito</t>
+                                    <t t-elif="pago.forma_pago_fact == '08'">Transferencia</t>
+                                    <t t-elif="pago.forma_pago_fact == '09'">Cheque</t>
+                                    <t t-elif="pago.forma_pago_fact == '99'">
+                                        <span t-field="pago.desc_forma_pago"/>
+                                    </t>
+                                    <t t-else="">Otro</t>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="'%.2f' % pago.valor_cuota_pagada"/>
+                                </td>
+                                <td>
+                                    <t t-if="pago.desc_forma_pago">
+                                        <span t-field="pago.desc_forma_pago"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- COLUMNA DERECHA: PLAZOS -->
+                <div style="float:left; width:49%; padding-left:5px; box-sizing:border-box;">
+                    <t t-if="o.plazo_ids or o.dgi_payment_ids.filtered(lambda p: p.forma_pago_fact != '01')">
+                        <h6 style="font-size:11px; font-weight:bold; margin-bottom:5px;">Información de Pago a Plazo</h6>
+                        <table class="table table-sm table-bordered" style="margin-bottom:0; width:100%;">
+                            <thead>
+                                <tr style="background-color:#f8f9fa;">
+                                    <th style="width:10%;">#</th>
+                                    <th style="width:25%;">Fecha</th>
+                                    <th class="text-end" style="width:20%;">B/. Valor</th>
+                                    <th style="width:45%;">Observación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="contador" t-value="1"/>
+
+                                <!-- Pagos inmediatos -->
+                                <t t-foreach="o.dgi_payment_ids.filtered(lambda p: p.forma_pago_fact != '01')" t-as="pago">
+                                    <tr>
+                                        <td><t t-esc="contador"/></td>
+                                        <td>
+                                            <span t-field="o.invoice_date" t-options='{"format": "dd/MM/yyyy"}'/>
+                                        </td>
+                                        <td class="text-end">
+                                            <span t-esc="'%.2f' % pago.valor_cuota_pagada"/>
+                                        </td>
+                                        <td style="font-size:9px;">
+                                            PAGO INMEDIATO -
+                                            <t t-if="pago.forma_pago_fact == '02'">EFECTIVO</t>
+                                            <t t-elif="pago.forma_pago_fact == '03'">TARJETA CRÉDITO</t>
+                                            <t t-elif="pago.forma_pago_fact == '04'">TARJETA DÉBITO</t>
+                                            <t t-elif="pago.forma_pago_fact == '08'">TRANSFERENCIA</t>
+                                            <t t-elif="pago.forma_pago_fact == '09'">CHEQUE</t>
+                                            <t t-else="">OTRO</t>
+                                        </td>
+                                    </tr>
+                                    <t t-set="contador" t-value="contador + 1"/>
+                                </t>
+
+                                <!-- Plazos futuros -->
+                                <tr t-foreach="o.plazo_ids" t-as="plazo">
+                                    <td><t t-esc="contador + plazo_index"/></td>
+                                    <td>
+                                        <span t-field="plazo.fecha_vence_cuota" t-options='{"format": "dd/MM/yyyy"}'/>
+                                    </td>
+                                    <td class="text-end">
+                                        <span t-esc="'%.2f' % plazo.valor_cuota"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="plazo.info_pago_cuota"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </t>
+                </div>
+
+                <!-- Clear float -->
+                <div style="clear:both;"></div>
+            </div>
+        </t>
+    </xpath>
+</template>
+
+</odoo>

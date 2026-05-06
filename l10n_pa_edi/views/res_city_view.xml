@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="l10n_pa_edi_state_cu_codification_form" model="ir.ui.view">
+            <field name="name">l10n_pa_edi.state_cu_codification_tree</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="priority" eval="900"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="cu_name"/>
+                </field>    
+            </field>
+        </record>
+
+
+        <record id="l10n_pa_edi_state_cu_codification_tree" model="ir.ui.view">
+            <field name="name">l10n_pa_edi.state_cu_codification_tree</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_tree"/>
+            <field name="priority" eval="900"/>
+            <field name="arch" type="xml">            
+                <field name="code" position="after">
+                    <field name="cu_name"/>
+                </field>                
+            </field>
+        </record>
+
+        <!--
+          Distritos
+        -->
+
+        <record id="view_country_state_district_tree" model="ir.ui.view">
+            <field name="name">res.country.state.district.tree</field>
+            <field name="model">res.country.state.district</field>
+            <field name="arch" type="xml">
+                <list string="Districts">
+                    <field name="name"/>
+                    <field name="state_id"/>
+                    <field name="cu_name"/>
+                    <field name="country_id"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_country_state_district_form" model="ir.ui.view">
+            <field name="name">res.country.state.district.form</field>
+            <field name="model">res.country.state.district</field>
+            <field name="arch" type="xml">
+                <form string="District">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="state_id" options='{"no_open": True}'/>
+                            <field name="cu_name"/>
+                            <field name="country_id" options='{"no_open": True}'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_state_district" model="ir.actions.act_window">
+            <field name="name">Districts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.state.district</field>
+            <field name="view_id" ref="view_country_state_district_tree"/>
+        </record>
+
+        <menuitem action="action_country_state_district"
+            id="menu_country_state_district_partner" parent="contacts.menu_localisation" sequence="3" groups="base.group_no_one"/>
+
+        <!--
+          res.country.state.district.jurisdiction
+        -->
+
+        <record id="view_country_state_district_jurisdiction_tree" model="ir.ui.view">
+            <field name="name">res.country.state.district.jurisdiction.tree</field>
+            <field name="model">res.country.state.district.jurisdiction</field>
+            <field name="arch" type="xml">
+                <list string="Jurisdiction">
+                    <field name="name"/>
+                    <field name="district_id"/>
+                    <field name="cu_name"/>
+                    <field name="country_id"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_country_state_district_jurisdiction_form" model="ir.ui.view">
+            <field name="name">res.country.state.district.jurisdiction.form</field>
+            <field name="model">res.country.state.district.jurisdiction</field>
+            <field name="arch" type="xml">
+                <form string="Jurisdiction">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="district_id" options='{"no_open": True}'/>
+                            <field name="cu_name"/>
+                            <field name="country_id" options='{"no_open": True}'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_state_district_jurisdiction" model="ir.actions.act_window">
+            <field name="name">Jurisdiction</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.country.state.district.jurisdiction</field>
+            <field name="view_id" ref="view_country_state_district_jurisdiction_tree"/>
+        </record>
+
+        <menuitem action="action_country_state_district_jurisdiction"
+            id="menu_country_state_district_jurisdiction_partner" parent="contacts.menu_localisation" sequence="4" groups="base.group_no_one"/>
+
+    </data>
+</openerp>

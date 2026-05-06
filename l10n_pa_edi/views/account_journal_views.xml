@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_journal_form_l10n_pa_edi" model="ir.ui.view">
+        <field name="name">account.journal.form.l10n_pa_edi</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='advanced_settings']" position="after">
+                <page string="Fact. Electrónica PA"
+                      name="l10n_pa_edi_journal"
+                      invisible="type != 'sale'">
+
+                    <group string="Configuración FEL">
+                        <field name="l10n_pa_edi_use_global_sequence"/>
+                        <field name="l10n_pa_edi_punto_facturacion"
+                               invisible="l10n_pa_edi_use_global_sequence == True"
+                               required="l10n_pa_edi_use_global_sequence == False"/>
+                        <field name="l10n_pa_edi_sequence_id"
+                               invisible="l10n_pa_edi_use_global_sequence == True"
+                               required="l10n_pa_edi_use_global_sequence == False"/>
+                        <field name="l10n_pa_edi_sequence_nc_id"
+                               invisible="l10n_pa_edi_use_global_sequence == True"
+                               required="l10n_pa_edi_use_global_sequence == False"/>
+                    </group>
+
+                    <div class="alert alert-info"
+                         invisible="l10n_pa_edi_use_global_sequence == False">
+                        <p>
+                            Este diario usa la <strong>secuencia global de la empresa</strong>
+                            (comportamiento original). Para migrar a secuencia independiente
+                            por diario, usa el botón de abajo.
+                        </p>
+                    </div>
+
+                    <div class="alert alert-success"
+                         invisible="l10n_pa_edi_use_global_sequence == True">
+                        <p>
+                            Este diario usa su <strong>propia secuencia FEL</strong>.
+                            PFF configurado: <strong><field name="l10n_pa_edi_punto_facturacion"
+                                                            readonly="1" nolabel="1"/></strong>
+                        </p>
+                    </div>
+
+                    <div invisible="l10n_pa_edi_use_global_sequence == False and l10n_pa_edi_sequence_nc_id != False">
+                        <button name="action_open_migrate_wizard"
+                                string="Configurar secuencias FEL"
+                                type="object"
+                                class="btn-secondary"
+                                icon="fa-exchange"/>
+                    </div>
+
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Tasa ITBMS -->
+        <record id="tasaitbms_0porc" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">itbms</field>
+            <field name="l10n_pa_edi_tax_code">00</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Tasa del ITBMS 0%(exento)</field>
+        </record>
+        <record id="tasaitbms_7porc" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">itbms</field>
+            <field name="l10n_pa_edi_tax_code">01</field>
+            <field name="l10n_pa_edi_tax_rate">0.07</field>
+            <field name="l10n_pa_edi_tax_name">Tasa del ITBMS 7%</field>
+        </record>
+        <record id="tasaitbms_10porc" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">itbms</field>
+            <field name="l10n_pa_edi_tax_code">02</field>
+            <field name="l10n_pa_edi_tax_rate">0.10</field>
+            <field name="l10n_pa_edi_tax_name">Tasa del ITBMS 10%</field>
+        </record>
+        <record id="tasaitbms_15porc" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">itbms</field>
+            <field name="l10n_pa_edi_tax_code">03</field>
+            <field name="l10n_pa_edi_tax_rate">0.15</field>
+            <field name="l10n_pa_edi_tax_name">Tasa del ITBMS 15%</field>
+        </record>
+        <!-- Tasa ISC -->
+        <record id="tasaisc_0porc" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">isc</field>
+            <field name="l10n_pa_edi_tax_code">00</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Tasa del ISC</field>
+        </record>
+        <!-- Tasa OTI -->
+        <record id="tasaoti_sume_911" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">01</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">SUME 911</field>
+        </record>
+        <record id="tasaoti_tasa_port_num" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">02</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Tasa Portabilidad Numérica</field>
+        </record>
+        <record id="tasaoti_imps_seguro" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">03</field>
+            <field name="l10n_pa_edi_tax_rate">0.05</field>
+            <field name="l10n_pa_edi_tax_name">Impuesto sobre Seguro (5%)</field>
+        </record>
+        <record id="tasaoti_attt_imps" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">04</field>
+            <field name="l10n_pa_edi_tax_rate">0.01</field>
+            <field name="l10n_pa_edi_tax_name">ATTT-impuestos sobre seguro autos (1%)</field>
+        </record>
+        <record id="tasaoti_tasa_salida" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">05</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Tasa Salida Aeropuerto (FZ)</field>
+        </record>
+        <record id="tasaoti_cargo_ince" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">06</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Cargo incentivo Desarrollo Aeropuerto (F3)</field>
+        </record>
+        <record id="tasaoti_cargo_seguridad" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">07</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Cargo Seguridad Aeropuerto (AH)</field>
+        </record>
+        <record id="tasaoti_otros_cargos" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">08</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Otros Cargos (XT)</field>
+        </record>
+        <record id="tasaoti_combustible" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">09</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Combustible (YQ)</field>
+        </record>
+        <record id="tasaoti_feci" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">10</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">FECI</field>
+        </record>
+        <record id="tasaoti_intereses" model="account.tax.fact">
+            <field name="l10n_pa_edi_tax_type">oti</field>
+            <field name="l10n_pa_edi_tax_code">11</field>
+            <field name="l10n_pa_edi_tax_rate">0.00</field>
+            <field name="l10n_pa_edi_tax_name">Intereses</field>
+        </record>
+    </data>
+</odoo>

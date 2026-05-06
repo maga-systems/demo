@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="partner_def_address_form" model="ir.ui.view">
+            <field name="name">l10n_pa_edi.res.partner.def.fields.form</field>
+            <field name="model">res.partner.def.fields</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="country_id"/>
+                            <field name="state_id"/>
+                            <field name="district_id"/>
+                            <field name="jurisdiction_id"/>
+                            <field name="l10n_pa_edi_customer_type"/>
+                            <field name="l10n_pa_edi_tipo_contribuyente"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_server_open_view_res_country" model="ir.actions.server">
+            <field name="name">Open View Res Country</field>
+            <field name="model_id" ref="model_res_partner_def_fields"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_window',
+                    'res_model': 'res.partner.def.fields',
+                    'view_mode': 'form',
+                    'target': 'new',
+                    'res_id': env['res.partner.def.fields'].search([('company_id', '=', env.company.id)], limit=1).id,
+                }
+            </field>
+        </record>
+        <!--
+            <menuitem id="menu_default_addr_partner_sub" name="Default Address (Partner)" parent="menu_dgi_web_service" action="action_server_open_view_res_country" /> 
+        -->
+        
+    </data>
+    
+</odoo>

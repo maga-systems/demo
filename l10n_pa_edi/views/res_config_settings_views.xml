@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="res_config_settings_view_form">
+        <field name="name">res.config.settings.view.form.inherit.l10n_pa_dgi_ws</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <field name="country_code" invisible="1" />
+                <field name="res_partner_def_fields" invisible="1" />
+                <field name="company_id" invisible="1" />
+                <field name="l10n_pa_use_cfe" invisible="1" />
+                <app name="l10n_pa_dgi_ws" title="Electronic Invoicing - Panama" string="Electronic Invoicing - Panama"  data-string="Electronic Invoicing - Panama" data-key="sale_management_panama">
+                    <block name="panama" title="Electronic Invoicing - Panama" string="Electronic Invoicing - Panama">
+                        <field name="country_code" class="o_hidden" />
+                        <h2>E-Invoicing - Panama</h2>
+
+                        <setting name="panama_localization" string="Default - Datos de Cliente">
+                            <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." groups="base.group_multi_company" />
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="def_fel_country_id" />
+                                    <field name="def_fel_country_id" class="o_light_label" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_fel_state_id" />
+                                    <field name="def_fel_state_id" class="o_light_label" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_fel_district_id" />
+                                    <field name="def_fel_district_id" class="o_light_label" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_fel_jurisdiction_id" />
+                                    <field name="def_fel_jurisdiction_id" class="o_light_label" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_fel_l10n_pa_edi_customer_type" />
+                                    <field name="def_fel_l10n_pa_edi_customer_type" class="o_light_label" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_fel_l10n_pa_edi_tipo_contribuyente" />
+                                    <field name="def_fel_l10n_pa_edi_tipo_contribuyente" class="o_light_label" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+                                </div>
+                            </div>
+                        </setting>
+                        <setting name="panama_localization_invoice" string="Default - Datos de Factura">
+
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="def_tipoemision" />
+                                    <field name="def_tipoemision" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_tipodocumento" />
+                                    <field name="def_tipodocumento" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_puntofacturacionfiscal" />
+                                    <field name="def_puntofacturacionfiscal" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_destinooperacion" />
+                                    <field name="def_destinooperacion" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_formatocafe_sd" />
+                                    <field name="def_formatocafe_sd" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_formatocafe_pos" />
+                                    <field name="def_formatocafe_pos" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_entregacafe" />
+                                    <field name="def_entregacafe" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_enviocontenedor" />
+                                    <field name="def_enviocontenedor" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_procesogeneracion" />
+                                    <field name="def_procesogeneracion" class="o_light_label" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label for="def_tipoventa" />
+                                    <field name="def_tipoventa" class="o_light_label" />
+                                </div>
+                            </div>
+                        </setting>
+                        <setting name="panama_localization_services" string="Web Services">
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <label for="l10n_pa_use_cfe" class="o_light_label" />
+                                    <field name="l10n_pa_use_cfe" />
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16" invisible="l10n_pa_use_cfe == False">
+                                    <div class="row mt16">
+                                        <label for="l10n_pa_ws_environment" class="col-lg-3 o_light_label" />
+                                        <field name="l10n_pa_ws_environment" />
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="l10n_pa_ws_wsdl_url" class="col-lg-3 o_light_label" />
+                                        <field name="l10n_pa_ws_wsdl_url" readonly="True" />
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="l10n_pa_ws_user_fname" class="col-lg-3 o_light_label" />
+                                        <field name="l10n_pa_ws_user_fname" readonly="True" />
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="l10n_pa_ws_token_fname" class="col-lg-3 o_light_label" />
+                                        <field name="l10n_pa_ws_token_fname" password="True" readonly="True" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <button name="l10n_pa_connection_test" type="object" class="oe_link oe_inline" string="⇒ Test Connections" />
+                                </div>
+                                <div class="mt16">
+                                    <button name="open_views_logs_fel_pan" type="object" class="oe_link oe_inline" string="⇒ Audit Logs" />
+                                </div>
+                                <div class="mt16">
+                                    <button name="open_sequence_factura_fel" type="object" class="oe_link oe_inline" string="⇒ Check Next Document Number" />
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+    <menuitem id="sale_panama_menu_root" name="Electronic Invoicing - Panama" web_icon="sale_management_panama,static/description/icon.png" active="False" sequence="30" />
+</odoo>

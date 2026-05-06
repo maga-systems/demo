@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="access_l10n_pa_edi_wizard_migrate_sequence" model="ir.model.access">
+        <field name="name">l10n_pa_edi.wizard.migrate.sequence access</field>
+        <field name="model_id" ref="model_l10n_pa_edi_wizard_migrate_sequence"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="view_wizard_migrate_journal_sequence_form"
+            model="ir.ui.view">
+        <field name="name">l10n_pa_edi.wizard.migrate.sequence.form</field>
+        <field name="model">l10n_pa_edi.wizard.migrate.sequence</field>
+        <field name="arch" type="xml">
+            <form string="Migrar secuencia FEL a diario">
+                <sheet>
+                    <group>
+                        <field name="journal_id" readonly="1"/>
+                    </group>
+                    <group string="Punto de Facturación">
+                        <field name="punto_facturacion"
+                               placeholder="Ej: 001"/>
+                    </group>
+                    <group string="Facturas (tipoDocumento 01)">
+                        <field name="ultimo_folio_dgi"
+                               help="Ingresa 0 si el diario nunca ha emitido facturas."/>
+                        <field name="next_number" readonly="1"/>
+                    </group>
+                    <group string="Notas de Crédito (tipoDocumento 04/06)">
+                        <field name="ultimo_folio_nc"
+                               help="Ingresa 0 si el diario nunca ha emitido notas de crédito."/>
+                        <field name="next_number_nc" readonly="1"/>
+                    </group>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Antes de continuar:</strong>
+                        Confirma el último folio autorizado consultando
+                        <em>FoliosRestantes</em> en el PAC (The Factory HKA).
+                        Una vez migrado, el diario dejará de usar la secuencia global.
+                    </div>
+                </sheet>
+                <footer>
+                    <button name="action_migrate"
+                            string="Confirmar migración"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancelar"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

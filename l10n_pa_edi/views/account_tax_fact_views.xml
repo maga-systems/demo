@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Vista tree de impuestos para facturación electrónica-->
+    <record id="account_tax_fact_tree_view" model="ir.ui.view">
+        <field name="name">account.tax.fact.tree</field>
+        <field name="model">account.tax.fact</field>
+        <field name="arch" type="xml">
+            <list string="Tipo de impuesto"  >
+                <field name="l10n_pa_edi_tax_type" invisible="1"/>
+                <field name="l10n_pa_edi_tax_name"/>
+                <field name="l10n_pa_edi_tax_code"/>
+                <field name="l10n_pa_edi_tax_rate"/>
+            </list>
+        </field>
+    </record>
+    <!--Vista formulario de impuestos para facturación electrónica-->
+    <record id="account_tax_fact_form_view" model="ir.ui.view">
+        <field name="name">account.tax.fact.form</field>
+        <field name="model">account.tax.fact</field>
+        <field name="arch" type="xml">
+            <form string="Tipo de impuesto">
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="l10n_pa_edi_tax_name"/>
+                        <field name="l10n_pa_edi_tax_type"/>
+                        <field name="l10n_pa_edi_tax_code"/>
+                        <field name="l10n_pa_edi_tax_rate"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Search view for account.tax.fact -->
+    <record id="account_tax_fact_search_view" model="ir.ui.view">
+        <field name="name">account.tax.fact.search</field>
+        <field name="model">account.tax.fact</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="l10n_pa_edi_tax_type"/>
+                <field name="l10n_pa_edi_tax_code"/>
+                <field name="l10n_pa_edi_tax_rate"/>
+                <group>
+                    <filter string="ITBMS" name="itbms" domain="[('l10n_pa_edi_tax_type','=','itbms')]"/>
+                    <filter string="ISC" name="isc" domain="[('l10n_pa_edi_tax_type','=','isc')]"/>
+                    <filter string="OTI" name="oti" domain="[('l10n_pa_edi_tax_type','=','oti')]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <!-- botón para abrir la vista tree de impuestos para facturación electrónica -->
+    <record id="account_tax_fact_action" model="ir.actions.act_window">
+        <field name="name">Impuestos para facturación electrónica</field>
+        <field name="res_model">account.tax.fact</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'group_by': 'l10n_pa_edi_tax_type'}</field>
+    </record>
+
+    <!-- menú para abrir la vista tree de impuestos en contabilidad contabilidad -->
+    <menuitem id="menu_account_tax_fact" name="Impuestos para facturación electrónica" parent="account.account_account_menu" action="account_tax_fact_action"
+    sequence="2"/>
+
+</odoo>

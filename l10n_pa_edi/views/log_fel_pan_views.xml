@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de Bitacora -->
+    <record id="view_log_fel_pan_tree" model="ir.ui.view">
+        <field name="name">view_log_fel_pan_tree</field>
+        <field name="model">log.fel.pan</field>
+        <field name="arch" type="xml">
+            <list default_order="date_hora desc">
+                <field name="name"/>
+                <field name="computer_invoice_id"/>
+                <field name="nodocumentofiscal"/>
+                <field name="company_id"/>
+                <field name="type" />
+                <field name="date_hora" />
+                <field name="message"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_log_fel_pa_form" model="ir.ui.view">
+        <field name="name">log_fel_pan_form</field>
+        <field name="model">log.fel.pan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,sent,done"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="computer_invoice_id" readonly="1"/>
+                        <field name="company_id" invisible="1" readonly="1"/>
+                        <field name="user_id" invisible="1"/>
+                        <field name="type" readonly="1"/>
+                        <field name="date_hora" readonly="1"/>
+                        <field name="nodocumentofiscal" readonly="1"/>
+                        <field name="message" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Details">
+                            <field name="json_send" widget="html" readonly="1"/>
+                        </page>
+                        <page string="Response">
+                            <field name="json_received" widget="html" readonly="1"/>
+                        </page>
+                        <page string="Data Debug" groups="base.group_no_one">
+                            <group>
+                                <!--mostrar los datos debug-->
+                                <field name="no_pos_order_id" readonly="1"/>
+                                <field name="no_pos_order_ref" readonly="1"/>
+                                <field name="invoice_origin" readonly="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!--search-->
+    <record id="view_log_fel_pan_search" model="ir.ui.view">
+        <field name="name">log_fel_pan_search</field>
+        <field name="model">log.fel.pan</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="company_id"/>
+                <field name="date_hora"/>
+                <field name="type"/>
+                <field name="message"/>
+                <filter string="Group By Type" name="group_by_type" domain="[]" context="{'group_by':'type'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_log_fel_pan" model="ir.actions.act_window">
+        <field name="name">Log FEL PAN</field>
+        <field name="res_model">log.fel.pan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    
+</odoo>

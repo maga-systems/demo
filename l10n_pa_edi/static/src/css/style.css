@@ -1,0 +1,27 @@
+.top-corner {
+    position:absolute;
+    top:7px;
+    right:7px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+.topcorner {
+    position:absolute;
+    top:7px;
+    right:7px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+.top-corner-invo {
+    position:absolute;
+    top:-34px;
+    right:1px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}

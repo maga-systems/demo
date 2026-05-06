@@ -1,0 +1,683 @@
+id,district_id:id,name,cu_name
+jurisdiction_pa_1,l10n_pa_edi.district_pa_1,BOCAS DEL TORO,1
+jurisdiction_pa_2,l10n_pa_edi.district_pa_1,BAHIA AZUL,2
+jurisdiction_pa_3,l10n_pa_edi.district_pa_1,BASTIMENTOS,3
+jurisdiction_pa_4,l10n_pa_edi.district_pa_1,CALOVEVORA O STA.CATALINA,4
+jurisdiction_pa_5,l10n_pa_edi.district_pa_1,PUNTA LAUREL,5
+jurisdiction_pa_6,l10n_pa_edi.district_pa_1,TOBOBE,6
+jurisdiction_pa_7,l10n_pa_edi.district_pa_2,CHANGUINOLA (CABECERA),1
+jurisdiction_pa_8,l10n_pa_edi.district_pa_2,ALMIRANTE,2
+jurisdiction_pa_9,l10n_pa_edi.district_pa_2,GUABITO,3
+jurisdiction_pa_10,l10n_pa_edi.district_pa_3,CHIRIQUI GRANDE (CABECERA),1
+jurisdiction_pa_11,l10n_pa_edi.district_pa_3,CANQUINTU,2
+jurisdiction_pa_12,l10n_pa_edi.district_pa_3,GUORONI,3
+jurisdiction_pa_13,l10n_pa_edi.district_pa_3,MUNUNI,4
+jurisdiction_pa_14,l10n_pa_edi.district_pa_3,PIEDRA ROJA,5
+jurisdiction_pa_15,l10n_pa_edi.district_pa_3,PUNTA ROBALO,6
+jurisdiction_pa_16,l10n_pa_edi.district_pa_4,AGUADULCE (CABECERA),1
+jurisdiction_pa_17,l10n_pa_edi.district_pa_4,EL CRISTO,2
+jurisdiction_pa_18,l10n_pa_edi.district_pa_4,EL ROBLE,3
+jurisdiction_pa_19,l10n_pa_edi.district_pa_4,POCRI,4
+jurisdiction_pa_20,l10n_pa_edi.district_pa_5,ANTON (CABECERA),1
+jurisdiction_pa_21,l10n_pa_edi.district_pa_5,CABUYA,2
+jurisdiction_pa_22,l10n_pa_edi.district_pa_5,EL CHIRU,3
+jurisdiction_pa_23,l10n_pa_edi.district_pa_5,EL RETIRO,4
+jurisdiction_pa_24,l10n_pa_edi.district_pa_5,EL VALLE,5
+jurisdiction_pa_25,l10n_pa_edi.district_pa_5,JUAN DIAZ (ANTON),6
+jurisdiction_pa_26,l10n_pa_edi.district_pa_5,RIO HATO,7
+jurisdiction_pa_27,l10n_pa_edi.district_pa_5,SAN JUAN DE DIOS,8
+jurisdiction_pa_28,l10n_pa_edi.district_pa_5,SANTA RITA,9
+jurisdiction_pa_29,l10n_pa_edi.district_pa_6,LA PINTADA (CABECERA),1
+jurisdiction_pa_30,l10n_pa_edi.district_pa_6,EL HARINO,2
+jurisdiction_pa_31,l10n_pa_edi.district_pa_6,EL POTRERO,3
+jurisdiction_pa_32,l10n_pa_edi.district_pa_6,LLANO GRANDE,4
+jurisdiction_pa_33,l10n_pa_edi.district_pa_6,PIEDRAS GORDAS,5
+jurisdiction_pa_34,l10n_pa_edi.district_pa_7,NATA (CABECERA),1
+jurisdiction_pa_35,l10n_pa_edi.district_pa_7,CAPELLANIA,2
+jurisdiction_pa_36,l10n_pa_edi.district_pa_7,EL CAÑO,3
+jurisdiction_pa_37,l10n_pa_edi.district_pa_7,GUZMAN,4
+jurisdiction_pa_38,l10n_pa_edi.district_pa_7,LAS HUACAS,5
+jurisdiction_pa_39,l10n_pa_edi.district_pa_7,TOZA,6
+jurisdiction_pa_40,l10n_pa_edi.district_pa_8,OLA (CABECERA),1
+jurisdiction_pa_41,l10n_pa_edi.district_pa_8,EL COPE,2
+jurisdiction_pa_42,l10n_pa_edi.district_pa_8,EL PALMAR,3
+jurisdiction_pa_43,l10n_pa_edi.district_pa_8,EL PICACHO,4
+jurisdiction_pa_44,l10n_pa_edi.district_pa_8,LA PAVA,5
+jurisdiction_pa_45,l10n_pa_edi.district_pa_9,PENONOME (CABECERA),1
+jurisdiction_pa_46,l10n_pa_edi.district_pa_9,CAÑAVERAL,2
+jurisdiction_pa_47,l10n_pa_edi.district_pa_9,COCLE,3
+jurisdiction_pa_48,l10n_pa_edi.district_pa_9,CHIRIGUI ARRIBA,4
+jurisdiction_pa_49,l10n_pa_edi.district_pa_9,EL COCO,5
+jurisdiction_pa_50,l10n_pa_edi.district_pa_9,PAJONAL,6
+jurisdiction_pa_51,l10n_pa_edi.district_pa_9,RIO GRANDE,7
+jurisdiction_pa_52,l10n_pa_edi.district_pa_9,RIO INDIO,8
+jurisdiction_pa_53,l10n_pa_edi.district_pa_9,TOABRE,9
+jurisdiction_pa_54,l10n_pa_edi.district_pa_9,TULU,10
+jurisdiction_pa_55,l10n_pa_edi.district_pa_10,COLON (BARRIO NORTE),1
+jurisdiction_pa_56,l10n_pa_edi.district_pa_10,COLON (BARRIO SUR),2
+jurisdiction_pa_57,l10n_pa_edi.district_pa_10,BUENA VISTA,3
+jurisdiction_pa_58,l10n_pa_edi.district_pa_10,CATIVA,4
+jurisdiction_pa_59,l10n_pa_edi.district_pa_10,CIRICITO,5
+jurisdiction_pa_60,l10n_pa_edi.district_pa_10,CRISTOBAL,6
+jurisdiction_pa_61,l10n_pa_edi.district_pa_10,ESCOBAL,7
+jurisdiction_pa_62,l10n_pa_edi.district_pa_10,LIMON,8
+jurisdiction_pa_63,l10n_pa_edi.district_pa_10,NUEVA PROVIDENCIA,9
+jurisdiction_pa_64,l10n_pa_edi.district_pa_10,PUERTO PILON,10
+jurisdiction_pa_65,l10n_pa_edi.district_pa_10,SABANITAS,11
+jurisdiction_pa_66,l10n_pa_edi.district_pa_10,SALAMANCA,12
+jurisdiction_pa_67,l10n_pa_edi.district_pa_10,SAN JUAN,13
+jurisdiction_pa_68,l10n_pa_edi.district_pa_10,SANTA ROSA,14
+jurisdiction_pa_69,l10n_pa_edi.district_pa_11,CHAGRES (CABECERA),1
+jurisdiction_pa_70,l10n_pa_edi.district_pa_11,ACHIOTE,2
+jurisdiction_pa_71,l10n_pa_edi.district_pa_11,EL GUABO,3
+jurisdiction_pa_72,l10n_pa_edi.district_pa_11,LA ENCANTADA,4
+jurisdiction_pa_73,l10n_pa_edi.district_pa_11,PALMAS BELLAS,5
+jurisdiction_pa_74,l10n_pa_edi.district_pa_11,PIÑA,6
+jurisdiction_pa_75,l10n_pa_edi.district_pa_11,SALUD,7
+jurisdiction_pa_76,l10n_pa_edi.district_pa_12,DONOSO (CABECERA),1
+jurisdiction_pa_77,l10n_pa_edi.district_pa_12,COCLE DEL NORTE,2
+jurisdiction_pa_78,l10n_pa_edi.district_pa_12,EL GUASIMO,3
+jurisdiction_pa_79,l10n_pa_edi.district_pa_12,GOBEA,4
+jurisdiction_pa_80,l10n_pa_edi.district_pa_12,RIO INDIO,5
+jurisdiction_pa_81,l10n_pa_edi.district_pa_12,SAN JOSE DEL GENERAL(2),6
+jurisdiction_pa_82,l10n_pa_edi.district_pa_13,PORTOBELO (CABECERA),1
+jurisdiction_pa_83,l10n_pa_edi.district_pa_13,CACIQUE,2
+jurisdiction_pa_84,l10n_pa_edi.district_pa_13,GARROTE,3
+jurisdiction_pa_85,l10n_pa_edi.district_pa_13,ISLA GRANDE,4
+jurisdiction_pa_86,l10n_pa_edi.district_pa_13,MARIA CHIQUITA,5
+jurisdiction_pa_87,l10n_pa_edi.district_pa_14,SANTA ISABEL (CABECERA),1
+jurisdiction_pa_88,l10n_pa_edi.district_pa_14,CUANGO,2
+jurisdiction_pa_89,l10n_pa_edi.district_pa_14,MIRAMAR,3
+jurisdiction_pa_90,l10n_pa_edi.district_pa_14,NOMBRE DE DIOS,4
+jurisdiction_pa_91,l10n_pa_edi.district_pa_14,PALMIRA,5
+jurisdiction_pa_92,l10n_pa_edi.district_pa_14,PLAYA CHIQUITA,6
+jurisdiction_pa_93,l10n_pa_edi.district_pa_14,SANTA ISABEL,7
+jurisdiction_pa_94,l10n_pa_edi.district_pa_14,VIENTO FRIO,8
+jurisdiction_pa_95,l10n_pa_edi.district_pa_15,ALANJE (CABECERA),1
+jurisdiction_pa_96,l10n_pa_edi.district_pa_15,DIVALA,2
+jurisdiction_pa_97,l10n_pa_edi.district_pa_15,EL TEJAR,3
+jurisdiction_pa_98,l10n_pa_edi.district_pa_15,EL GUARUMAL,4
+jurisdiction_pa_99,l10n_pa_edi.district_pa_15,PALO GRANDE,5
+jurisdiction_pa_100,l10n_pa_edi.district_pa_15,QUEREVALO,6
+jurisdiction_pa_101,l10n_pa_edi.district_pa_15,SANTO TOMAS,7
+jurisdiction_pa_102,l10n_pa_edi.district_pa_16,BARU (CABECERA),1
+jurisdiction_pa_103,l10n_pa_edi.district_pa_16,LIMONES,2
+jurisdiction_pa_104,l10n_pa_edi.district_pa_16,PROGRESO,3
+jurisdiction_pa_105,l10n_pa_edi.district_pa_17,BOQUERON (CABECERA),1
+jurisdiction_pa_106,l10n_pa_edi.district_pa_17,BAGALA,2
+jurisdiction_pa_107,l10n_pa_edi.district_pa_17,CORDILLERA,3
+jurisdiction_pa_108,l10n_pa_edi.district_pa_17,GUABAL (2),4
+jurisdiction_pa_109,l10n_pa_edi.district_pa_17,GUAYABAL,5
+jurisdiction_pa_110,l10n_pa_edi.district_pa_17,PARAISO,6
+jurisdiction_pa_111,l10n_pa_edi.district_pa_17,PEDREGAL,7
+jurisdiction_pa_112,l10n_pa_edi.district_pa_17,TIJERAS (2),8
+jurisdiction_pa_113,l10n_pa_edi.district_pa_18,BOQUETE (CABECERA),1
+jurisdiction_pa_114,l10n_pa_edi.district_pa_18,CALDERA,2
+jurisdiction_pa_115,l10n_pa_edi.district_pa_18,PALMIRA,3
+jurisdiction_pa_116,l10n_pa_edi.district_pa_19,BUGABA (CABECERA),1
+jurisdiction_pa_117,l10n_pa_edi.district_pa_19,ASERRIO DE GARICHE,2
+jurisdiction_pa_118,l10n_pa_edi.district_pa_19,BUGABA,3
+jurisdiction_pa_119,l10n_pa_edi.district_pa_19,CERRO PUNTA,4
+jurisdiction_pa_120,l10n_pa_edi.district_pa_19,GOMEZ (2),5
+jurisdiction_pa_121,l10n_pa_edi.district_pa_19,LA ESTRELLA,6
+jurisdiction_pa_122,l10n_pa_edi.district_pa_19,SAN ANDRES,7
+jurisdiction_pa_123,l10n_pa_edi.district_pa_19,SANTA MARTA,8
+jurisdiction_pa_124,l10n_pa_edi.district_pa_19,SANTA ROSA,9
+jurisdiction_pa_125,l10n_pa_edi.district_pa_19,SANTO DOMINGO,10
+jurisdiction_pa_126,l10n_pa_edi.district_pa_19,SORTOVA,11
+jurisdiction_pa_127,l10n_pa_edi.district_pa_19,VOLCAN,12
+jurisdiction_pa_128,l10n_pa_edi.district_pa_20,DAVID (CABECERA),1
+jurisdiction_pa_129,l10n_pa_edi.district_pa_20,BIJAGUAL,2
+jurisdiction_pa_130,l10n_pa_edi.district_pa_20,COCHEA,3
+jurisdiction_pa_131,l10n_pa_edi.district_pa_20,CHIRIQUI,4
+jurisdiction_pa_132,l10n_pa_edi.district_pa_20,GUACA,5
+jurisdiction_pa_133,l10n_pa_edi.district_pa_20,LAS LOMAS,6
+jurisdiction_pa_134,l10n_pa_edi.district_pa_20,PEDREGAL,7
+jurisdiction_pa_135,l10n_pa_edi.district_pa_20,SAN CARLOS,8
+jurisdiction_pa_136,l10n_pa_edi.district_pa_20,SAN PABLO NUEVO,9
+jurisdiction_pa_137,l10n_pa_edi.district_pa_20,SAN PABLO VIEJO,10
+jurisdiction_pa_138,l10n_pa_edi.district_pa_21,DOLEGA (CABECERA),1
+jurisdiction_pa_139,l10n_pa_edi.district_pa_21,DOS RIOS,2
+jurisdiction_pa_140,l10n_pa_edi.district_pa_21,LOS ANASTACIOS,3
+jurisdiction_pa_141,l10n_pa_edi.district_pa_21,POTRERILLOS,4
+jurisdiction_pa_142,l10n_pa_edi.district_pa_21,POTRERILLOS ABAJO,5
+jurisdiction_pa_143,l10n_pa_edi.district_pa_21,ROVIRA,6
+jurisdiction_pa_144,l10n_pa_edi.district_pa_21,TINAJAS,7
+jurisdiction_pa_145,l10n_pa_edi.district_pa_22,GUALACA (CABECERA),1
+jurisdiction_pa_146,l10n_pa_edi.district_pa_22,HORNITO,2
+jurisdiction_pa_147,l10n_pa_edi.district_pa_22,LOS ANGELES,3
+jurisdiction_pa_148,l10n_pa_edi.district_pa_22,PAJA DE SOMBRERO,4
+jurisdiction_pa_149,l10n_pa_edi.district_pa_22,RINCON,5
+jurisdiction_pa_150,l10n_pa_edi.district_pa_23,REMEDIOS (CABECERA),1
+jurisdiction_pa_151,l10n_pa_edi.district_pa_23,CERRO IGLESIAS,2
+jurisdiction_pa_152,l10n_pa_edi.district_pa_23,EL NANCITO,3
+jurisdiction_pa_153,l10n_pa_edi.district_pa_23,HATO CHAMI,4
+jurisdiction_pa_154,l10n_pa_edi.district_pa_23,LAJERO,5
+jurisdiction_pa_155,l10n_pa_edi.district_pa_24,RENACIMIENTO (CABECERA),1
+jurisdiction_pa_156,l10n_pa_edi.district_pa_24,BREÑON,2
+jurisdiction_pa_157,l10n_pa_edi.district_pa_24,CAÑAS GORDAS (2),3
+jurisdiction_pa_158,l10n_pa_edi.district_pa_24,MONTE LIRIO,4
+jurisdiction_pa_159,l10n_pa_edi.district_pa_24,PLAZA CAISAN,5
+jurisdiction_pa_160,l10n_pa_edi.district_pa_24,SANTA CRUZ,6
+jurisdiction_pa_161,l10n_pa_edi.district_pa_25,SAN FELIX (CABECERA),1
+jurisdiction_pa_162,l10n_pa_edi.district_pa_25,CASCABEL,2
+jurisdiction_pa_163,l10n_pa_edi.district_pa_25,HATO COROTU,3
+jurisdiction_pa_164,l10n_pa_edi.district_pa_25,HATO CULANTRO,4
+jurisdiction_pa_165,l10n_pa_edi.district_pa_25,HATO JOBO,5
+jurisdiction_pa_166,l10n_pa_edi.district_pa_25,HATO JULI,6
+jurisdiction_pa_167,l10n_pa_edi.district_pa_25,HATO PILON,7
+jurisdiction_pa_168,l10n_pa_edi.district_pa_25,JUAY,8
+jurisdiction_pa_169,l10n_pa_edi.district_pa_25,QUEBRADA DE LORO,9
+jurisdiction_pa_170,l10n_pa_edi.district_pa_25,SALTO DUPI,10
+jurisdiction_pa_171,l10n_pa_edi.district_pa_25,SAN FELIX,11
+jurisdiction_pa_172,l10n_pa_edi.district_pa_26,SAN LORENZO (CABECERA),1
+jurisdiction_pa_173,l10n_pa_edi.district_pa_26,BOCA CHICA,2
+jurisdiction_pa_174,l10n_pa_edi.district_pa_26,BOCA DE BALSA,3
+jurisdiction_pa_175,l10n_pa_edi.district_pa_26,BOCA DE MONTE,4
+jurisdiction_pa_176,l10n_pa_edi.district_pa_26,CAMARON ARRIBA,5
+jurisdiction_pa_177,l10n_pa_edi.district_pa_26,CERRO BANCO,6
+jurisdiction_pa_178,l10n_pa_edi.district_pa_26,CERRO DE PATENA,7
+jurisdiction_pa_179,l10n_pa_edi.district_pa_26,EMPLANADA DE CHORCHA,8
+jurisdiction_pa_180,l10n_pa_edi.district_pa_26,SAN JUAN,9
+jurisdiction_pa_181,l10n_pa_edi.district_pa_26,SAN LORENZO,10
+jurisdiction_pa_182,l10n_pa_edi.district_pa_26,SOLOY,11
+jurisdiction_pa_183,l10n_pa_edi.district_pa_27,TOLE (CABECERA),1
+jurisdiction_pa_184,l10n_pa_edi.district_pa_27,ALTO CABALLERO,2
+jurisdiction_pa_185,l10n_pa_edi.district_pa_27,CERRO CAÑA,3
+jurisdiction_pa_186,l10n_pa_edi.district_pa_27,CERRO IGLESIAS,4
+jurisdiction_pa_187,l10n_pa_edi.district_pa_27,CERRO PUERCO,5
+jurisdiction_pa_188,l10n_pa_edi.district_pa_27,CERRO VIEJO,6
+jurisdiction_pa_189,l10n_pa_edi.district_pa_27,CHICHICA,7
+jurisdiction_pa_190,l10n_pa_edi.district_pa_27,LAJAS DE TOLE,8
+jurisdiction_pa_191,l10n_pa_edi.district_pa_27,MARACA,9
+jurisdiction_pa_192,l10n_pa_edi.district_pa_27,PEÑA BLANCA,10
+jurisdiction_pa_193,l10n_pa_edi.district_pa_27,POTRERO DE CAÑA,11
+jurisdiction_pa_194,l10n_pa_edi.district_pa_27,QUEBRADA DE PIEDRA,12
+jurisdiction_pa_195,l10n_pa_edi.district_pa_27,SITIO PRADO,13
+jurisdiction_pa_196,l10n_pa_edi.district_pa_28,CHEPIGANA (CABECERA),1
+jurisdiction_pa_197,l10n_pa_edi.district_pa_28,CAMOGANTI,2
+jurisdiction_pa_198,l10n_pa_edi.district_pa_28,CHEPIGANA,3
+jurisdiction_pa_199,l10n_pa_edi.district_pa_28,GARACHINE,4
+jurisdiction_pa_200,l10n_pa_edi.district_pa_28,JAQUE,5
+jurisdiction_pa_201,l10n_pa_edi.district_pa_28,PUERTO PIÑA,6
+jurisdiction_pa_202,l10n_pa_edi.district_pa_28,RIO CONGO,7
+jurisdiction_pa_203,l10n_pa_edi.district_pa_28,RIO IGLESIAS,8
+jurisdiction_pa_204,l10n_pa_edi.district_pa_28,SAMBU,9
+jurisdiction_pa_205,l10n_pa_edi.district_pa_28,SETENGANTI,10
+jurisdiction_pa_206,l10n_pa_edi.district_pa_28,TAIMATI,11
+jurisdiction_pa_207,l10n_pa_edi.district_pa_28,TUCUTI,12
+jurisdiction_pa_208,l10n_pa_edi.district_pa_29,PINOGANA (CABECERA),1
+jurisdiction_pa_209,l10n_pa_edi.district_pa_29,BOCA DE CUPE,2
+jurisdiction_pa_210,l10n_pa_edi.district_pa_29,PAYA,3
+jurisdiction_pa_211,l10n_pa_edi.district_pa_29,PINOGANA,4
+jurisdiction_pa_212,l10n_pa_edi.district_pa_29,PUCURO,5
+jurisdiction_pa_213,l10n_pa_edi.district_pa_29,YAPE,6
+jurisdiction_pa_214,l10n_pa_edi.district_pa_29,YAVIZA,7
+jurisdiction_pa_215,l10n_pa_edi.district_pa_30,CIRILO GUAINORA,1
+jurisdiction_pa_216,l10n_pa_edi.district_pa_30,LAJAS BLANCAS,2
+jurisdiction_pa_217,l10n_pa_edi.district_pa_30,MANUEL ORTEGA,3
+jurisdiction_pa_218,l10n_pa_edi.district_pa_31,RIO SABALO,1
+jurisdiction_pa_219,l10n_pa_edi.district_pa_31,JINGURUDO,2
+jurisdiction_pa_220,l10n_pa_edi.district_pa_32,CHITRE (CABECERA),1
+jurisdiction_pa_221,l10n_pa_edi.district_pa_32,LA ARENA,2
+jurisdiction_pa_222,l10n_pa_edi.district_pa_32,MONAGRILLO,3
+jurisdiction_pa_223,l10n_pa_edi.district_pa_33,LAS MINAS (CABECERA),1
+jurisdiction_pa_224,l10n_pa_edi.district_pa_33,CHEPO,2
+jurisdiction_pa_225,l10n_pa_edi.district_pa_33,CHUMICAL,3
+jurisdiction_pa_226,l10n_pa_edi.district_pa_33,EL TORO,4
+jurisdiction_pa_227,l10n_pa_edi.district_pa_33,LEONES,5
+jurisdiction_pa_228,l10n_pa_edi.district_pa_33,QUEBRADA DEL ROSARIO,6
+jurisdiction_pa_229,l10n_pa_edi.district_pa_34,LOS POZOS (CABECERA),1
+jurisdiction_pa_230,l10n_pa_edi.district_pa_34,CAPURI,2
+jurisdiction_pa_231,l10n_pa_edi.district_pa_34,EL CALABACITO,3
+jurisdiction_pa_232,l10n_pa_edi.district_pa_34,EL CEDRO,4
+jurisdiction_pa_233,l10n_pa_edi.district_pa_34,LA ARENA,5
+jurisdiction_pa_234,l10n_pa_edi.district_pa_34,LA PITALOZA,6
+jurisdiction_pa_235,l10n_pa_edi.district_pa_34,LOS CERRITOS,7
+jurisdiction_pa_236,l10n_pa_edi.district_pa_34,LOS CERROS DE PAJA,8
+jurisdiction_pa_237,l10n_pa_edi.district_pa_35,OCU (CABECERA),1
+jurisdiction_pa_238,l10n_pa_edi.district_pa_35,CERRO LARGO,2
+jurisdiction_pa_239,l10n_pa_edi.district_pa_35,LOS LLANOS,3
+jurisdiction_pa_240,l10n_pa_edi.district_pa_35,LLANO GRANDE,4
+jurisdiction_pa_241,l10n_pa_edi.district_pa_35,PEÑAS CHATAS,5
+jurisdiction_pa_242,l10n_pa_edi.district_pa_36,PARITA (CABECERA),1
+jurisdiction_pa_243,l10n_pa_edi.district_pa_36,CABUYA,2
+jurisdiction_pa_244,l10n_pa_edi.district_pa_36,LOS CASTILLOS,3
+jurisdiction_pa_245,l10n_pa_edi.district_pa_36,LLANO DE LA CRUZ,4
+jurisdiction_pa_246,l10n_pa_edi.district_pa_36,PARIS,5
+jurisdiction_pa_247,l10n_pa_edi.district_pa_36,PORTOBELILLO,6
+jurisdiction_pa_248,l10n_pa_edi.district_pa_36,POTUGA,7
+jurisdiction_pa_249,l10n_pa_edi.district_pa_37,PESE (CABECERA),1
+jurisdiction_pa_250,l10n_pa_edi.district_pa_37,LAS CABRAS (ESTE),2
+jurisdiction_pa_251,l10n_pa_edi.district_pa_37,EL PAJARO (NORTE 1),3
+jurisdiction_pa_252,l10n_pa_edi.district_pa_37,EL BARRERO (NORTE 2),4
+jurisdiction_pa_253,l10n_pa_edi.district_pa_37,EL PEDREGOSO (OESTE 1),5
+jurisdiction_pa_254,l10n_pa_edi.district_pa_37,EL CIRUELO (OESTE 2),6
+jurisdiction_pa_255,l10n_pa_edi.district_pa_37,SABANAGRANDE (SUR 1),7
+jurisdiction_pa_256,l10n_pa_edi.district_pa_37,RINCON HONDO (SUR 2),8
+jurisdiction_pa_257,l10n_pa_edi.district_pa_38,SANTA MARIA (CABECERA),1
+jurisdiction_pa_258,l10n_pa_edi.district_pa_38,CHUPAMPA,2
+jurisdiction_pa_259,l10n_pa_edi.district_pa_38,EL RINCON,3
+jurisdiction_pa_260,l10n_pa_edi.district_pa_39,GUARARE (CABECERA),1
+jurisdiction_pa_261,l10n_pa_edi.district_pa_39,EL ESPINAL,2
+jurisdiction_pa_262,l10n_pa_edi.district_pa_39,EL MACANO,3
+jurisdiction_pa_263,l10n_pa_edi.district_pa_39,GUARARE ARRIBA,4
+jurisdiction_pa_264,l10n_pa_edi.district_pa_39,LA ENEA,5
+jurisdiction_pa_265,l10n_pa_edi.district_pa_39,LA PASERA,6
+jurisdiction_pa_266,l10n_pa_edi.district_pa_39,LAS TRANCAS,7
+jurisdiction_pa_267,l10n_pa_edi.district_pa_39,LLANO ABAJO,8
+jurisdiction_pa_268,l10n_pa_edi.district_pa_40,LAS TABLAS (CABECERA),1
+jurisdiction_pa_269,l10n_pa_edi.district_pa_40,BAJO CORRAL,2
+jurisdiction_pa_270,l10n_pa_edi.district_pa_40,BAYANO,3
+jurisdiction_pa_271,l10n_pa_edi.district_pa_40,EL CARATE,4
+jurisdiction_pa_272,l10n_pa_edi.district_pa_40,EL COCAL,5
+jurisdiction_pa_273,l10n_pa_edi.district_pa_40,EL MANANTIAL,6
+jurisdiction_pa_274,l10n_pa_edi.district_pa_40,EL MUÑOZ,7
+jurisdiction_pa_275,l10n_pa_edi.district_pa_40,EL PEDREGOSO,8
+jurisdiction_pa_276,l10n_pa_edi.district_pa_40,LA LAJA,9
+jurisdiction_pa_277,l10n_pa_edi.district_pa_40,LA MIEL,10
+jurisdiction_pa_278,l10n_pa_edi.district_pa_40,LA PALMA,11
+jurisdiction_pa_279,l10n_pa_edi.district_pa_40,LA TIZA,12
+jurisdiction_pa_280,l10n_pa_edi.district_pa_40,LAS PALMITAS,13
+jurisdiction_pa_281,l10n_pa_edi.district_pa_40,LAS TABLAS ABAJO,14
+jurisdiction_pa_282,l10n_pa_edi.district_pa_40,NUARIO,15
+jurisdiction_pa_283,l10n_pa_edi.district_pa_40,PALMIRA,16
+jurisdiction_pa_284,l10n_pa_edi.district_pa_40,PEÑA BLANCA,17
+jurisdiction_pa_285,l10n_pa_edi.district_pa_40,RIO HONDO,18
+jurisdiction_pa_286,l10n_pa_edi.district_pa_40,SAN JOSE,19
+jurisdiction_pa_287,l10n_pa_edi.district_pa_40,SAN MIGUEL,20
+jurisdiction_pa_288,l10n_pa_edi.district_pa_40,SANTO DOMINGO,21
+jurisdiction_pa_289,l10n_pa_edi.district_pa_40,SESTEADERO,22
+jurisdiction_pa_290,l10n_pa_edi.district_pa_40,VALLE RICO,23
+jurisdiction_pa_291,l10n_pa_edi.district_pa_40,VALLERRIQUITO,24
+jurisdiction_pa_292,l10n_pa_edi.district_pa_41,LOS SANTOS (CABECERA),1
+jurisdiction_pa_293,l10n_pa_edi.district_pa_41,EL GUASIMO,2
+jurisdiction_pa_294,l10n_pa_edi.district_pa_41,LA COLORADA,3
+jurisdiction_pa_295,l10n_pa_edi.district_pa_41,LA ESPIGADILLA,4
+jurisdiction_pa_296,l10n_pa_edi.district_pa_41,LAS CRUCES,5
+jurisdiction_pa_297,l10n_pa_edi.district_pa_41,LAS GUABAS,6
+jurisdiction_pa_298,l10n_pa_edi.district_pa_41,LOS ANGELES,7
+jurisdiction_pa_299,l10n_pa_edi.district_pa_41,LOS OLIVOS,8
+jurisdiction_pa_300,l10n_pa_edi.district_pa_41,LLANO LARGO,9
+jurisdiction_pa_301,l10n_pa_edi.district_pa_41,SABANA GRANDE,10
+jurisdiction_pa_302,l10n_pa_edi.district_pa_41,SANTA ANA,11
+jurisdiction_pa_303,l10n_pa_edi.district_pa_41,TRES QUEBRADAS,12
+jurisdiction_pa_304,l10n_pa_edi.district_pa_42,MACARACAS (CABACERA),1
+jurisdiction_pa_305,l10n_pa_edi.district_pa_42,BAHIA HONDA,2
+jurisdiction_pa_306,l10n_pa_edi.district_pa_42,BAJOS DE GÜERA,3
+jurisdiction_pa_307,l10n_pa_edi.district_pa_42,COROZAL,4
+jurisdiction_pa_308,l10n_pa_edi.district_pa_42,CHUPA,5
+jurisdiction_pa_309,l10n_pa_edi.district_pa_42,EL CEDRO (2),6
+jurisdiction_pa_310,l10n_pa_edi.district_pa_42,ESPINO AMARILLO,7
+jurisdiction_pa_311,l10n_pa_edi.district_pa_42,LA MESA,8
+jurisdiction_pa_312,l10n_pa_edi.district_pa_42,LAS PALMAS,9
+jurisdiction_pa_313,l10n_pa_edi.district_pa_42,LLANO DE PIEDRA,10
+jurisdiction_pa_314,l10n_pa_edi.district_pa_42,MOGOLLON,11
+jurisdiction_pa_315,l10n_pa_edi.district_pa_43,PEDASI (CABECERA),1
+jurisdiction_pa_316,l10n_pa_edi.district_pa_43,LOS ASIENTOS,2
+jurisdiction_pa_317,l10n_pa_edi.district_pa_43,MARIABE,3
+jurisdiction_pa_318,l10n_pa_edi.district_pa_43,PURIO,4
+jurisdiction_pa_319,l10n_pa_edi.district_pa_44,POCRI (CABECERA),1
+jurisdiction_pa_320,l10n_pa_edi.district_pa_44,EL CAÑAFISTULO,2
+jurisdiction_pa_321,l10n_pa_edi.district_pa_44,LAJAMINA,3
+jurisdiction_pa_322,l10n_pa_edi.district_pa_44,PARAISO,4
+jurisdiction_pa_323,l10n_pa_edi.district_pa_44,PARITILLA,5
+jurisdiction_pa_324,l10n_pa_edi.district_pa_45,TONOSI (CABECERA),1
+jurisdiction_pa_325,l10n_pa_edi.district_pa_45,ALTOS DE GUERA,2
+jurisdiction_pa_326,l10n_pa_edi.district_pa_45,CAÑAS,3
+jurisdiction_pa_327,l10n_pa_edi.district_pa_45,EL BEBEDERO,4
+jurisdiction_pa_328,l10n_pa_edi.district_pa_45,EL CACAO,5
+jurisdiction_pa_329,l10n_pa_edi.district_pa_45,EL CORTEZO,6
+jurisdiction_pa_330,l10n_pa_edi.district_pa_45,FLORES,7
+jurisdiction_pa_331,l10n_pa_edi.district_pa_45,GUANICO,8
+jurisdiction_pa_332,l10n_pa_edi.district_pa_45,LA TRONOSA,9
+jurisdiction_pa_333,l10n_pa_edi.district_pa_46,ARRAIJAN (CABECERA),1
+jurisdiction_pa_334,l10n_pa_edi.district_pa_46,JUAN D. AROSEMENA,2
+jurisdiction_pa_335,l10n_pa_edi.district_pa_46,NUEVO EMPERADOR,3
+jurisdiction_pa_336,l10n_pa_edi.district_pa_46,SANTA CLARA,4
+jurisdiction_pa_337,l10n_pa_edi.district_pa_46,VERACRUZ,5
+jurisdiction_pa_338,l10n_pa_edi.district_pa_46,VISTA ALEGRE,6
+jurisdiction_pa_339,l10n_pa_edi.district_pa_47,BALBOA (CABECERA),1
+jurisdiction_pa_340,l10n_pa_edi.district_pa_47,LA ENSENADA,2
+jurisdiction_pa_341,l10n_pa_edi.district_pa_47,LA ESMERALDA,3
+jurisdiction_pa_342,l10n_pa_edi.district_pa_47,LA GUINEA,4
+jurisdiction_pa_343,l10n_pa_edi.district_pa_47,PEDRO GONZALES,5
+jurisdiction_pa_344,l10n_pa_edi.district_pa_47,SABOGA,6
+jurisdiction_pa_345,l10n_pa_edi.district_pa_48,CAPIRA (CABECERA),1
+jurisdiction_pa_346,l10n_pa_edi.district_pa_48,CAIMITO,2
+jurisdiction_pa_347,l10n_pa_edi.district_pa_48,CAMPANA,3
+jurisdiction_pa_348,l10n_pa_edi.district_pa_48,CERMEÑO,4
+jurisdiction_pa_349,l10n_pa_edi.district_pa_48,CIRI DE LOS SANTOS,5
+jurisdiction_pa_350,l10n_pa_edi.district_pa_48,CIRI GRANDE,6
+jurisdiction_pa_351,l10n_pa_edi.district_pa_48,EL CACAO,7
+jurisdiction_pa_352,l10n_pa_edi.district_pa_48,LA TRINIDAD,8
+jurisdiction_pa_353,l10n_pa_edi.district_pa_48,LAS OLLAS ARRIBA,9
+jurisdiction_pa_354,l10n_pa_edi.district_pa_48,LIDICE,10
+jurisdiction_pa_355,l10n_pa_edi.district_pa_48,VILLA CARMEN,11
+jurisdiction_pa_356,l10n_pa_edi.district_pa_48,VILLA ROSARIO,12
+jurisdiction_pa_357,l10n_pa_edi.district_pa_49,CHAME (CABECERA),1
+jurisdiction_pa_358,l10n_pa_edi.district_pa_49,BEJUCO,2
+jurisdiction_pa_359,l10n_pa_edi.district_pa_49,BUENOS AIRES,3
+jurisdiction_pa_360,l10n_pa_edi.district_pa_49,CABUYA,4
+jurisdiction_pa_361,l10n_pa_edi.district_pa_49,CHICA,5
+jurisdiction_pa_362,l10n_pa_edi.district_pa_49,EL LIBANO,6
+jurisdiction_pa_363,l10n_pa_edi.district_pa_49,LAS LAJAS,7
+jurisdiction_pa_364,l10n_pa_edi.district_pa_49,NUEVA GORGONA,8
+jurisdiction_pa_365,l10n_pa_edi.district_pa_49,PUNTA CHAME,9
+jurisdiction_pa_366,l10n_pa_edi.district_pa_49,SAJALICES (2),10
+jurisdiction_pa_367,l10n_pa_edi.district_pa_49,SORA,11
+jurisdiction_pa_368,l10n_pa_edi.district_pa_50,CHEPO (CABECERA),1
+jurisdiction_pa_369,l10n_pa_edi.district_pa_50,CAÑITA,2
+jurisdiction_pa_370,l10n_pa_edi.district_pa_50,CHEPILLO,3
+jurisdiction_pa_371,l10n_pa_edi.district_pa_50,EL LLANO,4
+jurisdiction_pa_372,l10n_pa_edi.district_pa_50,LAS MARGARITAS  (2),5
+jurisdiction_pa_373,l10n_pa_edi.district_pa_50,SANTA CRUZ DE CHININA,6
+jurisdiction_pa_374,l10n_pa_edi.district_pa_51,CHIMAN (CABECERA),1
+jurisdiction_pa_375,l10n_pa_edi.district_pa_51,BRUJAS,2
+jurisdiction_pa_376,l10n_pa_edi.district_pa_51,GONZALO VASQUEZ,3
+jurisdiction_pa_377,l10n_pa_edi.district_pa_52,BARRIO BALBOA,1
+jurisdiction_pa_378,l10n_pa_edi.district_pa_52,BARRIO COLON,2
+jurisdiction_pa_379,l10n_pa_edi.district_pa_52,AMADOR,3
+jurisdiction_pa_380,l10n_pa_edi.district_pa_52,AROSEMENA,4
+jurisdiction_pa_381,l10n_pa_edi.district_pa_52,EL ARADO,5
+jurisdiction_pa_382,l10n_pa_edi.district_pa_52,EL COCO,6
+jurisdiction_pa_383,l10n_pa_edi.district_pa_52,FEUILLET,7
+jurisdiction_pa_384,l10n_pa_edi.district_pa_52,GUADALUPE,8
+jurisdiction_pa_385,l10n_pa_edi.district_pa_52,HERRERA,9
+jurisdiction_pa_386,l10n_pa_edi.district_pa_52,HURTADO,10
+jurisdiction_pa_387,l10n_pa_edi.district_pa_52,ITURRALDE,11
+jurisdiction_pa_388,l10n_pa_edi.district_pa_52,LA REPRESA,12
+jurisdiction_pa_389,l10n_pa_edi.district_pa_52,LOS DIAZ,13
+jurisdiction_pa_390,l10n_pa_edi.district_pa_52,MENDOZA,14
+jurisdiction_pa_391,l10n_pa_edi.district_pa_52,OBALDIA,15
+jurisdiction_pa_392,l10n_pa_edi.district_pa_52,PLAYA LEONA,16
+jurisdiction_pa_393,l10n_pa_edi.district_pa_52,PUERTO CAIMITO,17
+jurisdiction_pa_394,l10n_pa_edi.district_pa_52,SANTA RITA,18
+jurisdiction_pa_395,l10n_pa_edi.district_pa_53,SAN FELIPE,1
+jurisdiction_pa_396,l10n_pa_edi.district_pa_53,EL CHORRILLO,2
+jurisdiction_pa_397,l10n_pa_edi.district_pa_53,SANTA ANA,3
+jurisdiction_pa_398,l10n_pa_edi.district_pa_53,CALIDONIA,4
+jurisdiction_pa_399,l10n_pa_edi.district_pa_53,CURUNDU,5
+jurisdiction_pa_400,l10n_pa_edi.district_pa_53,BETHANIA,6
+jurisdiction_pa_401,l10n_pa_edi.district_pa_53,BELLA VISTA,7
+jurisdiction_pa_402,l10n_pa_edi.district_pa_53,PUEBLO NUEVO,8
+jurisdiction_pa_403,l10n_pa_edi.district_pa_53,SAN FRANCISCO,9
+jurisdiction_pa_404,l10n_pa_edi.district_pa_53,PARQUE LEFEVRE,10
+jurisdiction_pa_405,l10n_pa_edi.district_pa_53,RIO ABAJO,11
+jurisdiction_pa_406,l10n_pa_edi.district_pa_53,JUAN DIAZ,12
+jurisdiction_pa_407,l10n_pa_edi.district_pa_53,PEDREGAL,13
+jurisdiction_pa_408,l10n_pa_edi.district_pa_53,ANCON,14
+jurisdiction_pa_409,l10n_pa_edi.district_pa_53,CHILIBRE,15
+jurisdiction_pa_410,l10n_pa_edi.district_pa_53,LAS CUMBRES,16
+jurisdiction_pa_411,l10n_pa_edi.district_pa_53,PACORA,17
+jurisdiction_pa_412,l10n_pa_edi.district_pa_53,SAN MARTIN,18
+jurisdiction_pa_413,l10n_pa_edi.district_pa_53,TOCUMEN,19
+jurisdiction_pa_414,l10n_pa_edi.district_pa_54,SAN CARLOS (CABECERA),1
+jurisdiction_pa_415,l10n_pa_edi.district_pa_54,EL ESPINO,2
+jurisdiction_pa_416,l10n_pa_edi.district_pa_54,EL HIGO,3
+jurisdiction_pa_417,l10n_pa_edi.district_pa_54,GUAYABITO,4
+jurisdiction_pa_418,l10n_pa_edi.district_pa_54,LA ERMITA,5
+jurisdiction_pa_419,l10n_pa_edi.district_pa_54,LA LAGUNA,6
+jurisdiction_pa_420,l10n_pa_edi.district_pa_54,LAS UVAS,7
+jurisdiction_pa_421,l10n_pa_edi.district_pa_54,LOS LLANITOS,8
+jurisdiction_pa_422,l10n_pa_edi.district_pa_54,SAN JOSE,9
+jurisdiction_pa_423,l10n_pa_edi.district_pa_55,AMELIA DENIS DE ICAZA,1
+jurisdiction_pa_424,l10n_pa_edi.district_pa_55,BELISARIO PORRAS,2
+jurisdiction_pa_425,l10n_pa_edi.district_pa_55,JOSE DOMINGO ESPINAR,3
+jurisdiction_pa_426,l10n_pa_edi.district_pa_55,MATEO ITURRALDE,4
+jurisdiction_pa_427,l10n_pa_edi.district_pa_55,VICTORIANO LORENZO,5
+jurisdiction_pa_428,l10n_pa_edi.district_pa_56,TABOGA (CABECERA),1
+jurisdiction_pa_429,l10n_pa_edi.district_pa_56,OTOQUE OCCIDENTE,2
+jurisdiction_pa_430,l10n_pa_edi.district_pa_56,OTOQUE ORIENTE,3
+jurisdiction_pa_431,l10n_pa_edi.district_pa_57,ATALAYA (CABECERA),1
+jurisdiction_pa_432,l10n_pa_edi.district_pa_57,EL BARRITO (2),2
+jurisdiction_pa_433,l10n_pa_edi.district_pa_57,LA MONTAÑUELA (2),3
+jurisdiction_pa_434,l10n_pa_edi.district_pa_58,CALOBRE (CABECERA),1
+jurisdiction_pa_435,l10n_pa_edi.district_pa_58,BARNIZAL,2
+jurisdiction_pa_436,l10n_pa_edi.district_pa_58,CHITRA,3
+jurisdiction_pa_437,l10n_pa_edi.district_pa_58,EL COCLA,4
+jurisdiction_pa_438,l10n_pa_edi.district_pa_58,EL POTRERO,5
+jurisdiction_pa_439,l10n_pa_edi.district_pa_58,LA LAGUNA,6
+jurisdiction_pa_440,l10n_pa_edi.district_pa_58,LA RAYA DE CALOBRE,7
+jurisdiction_pa_441,l10n_pa_edi.district_pa_58,LA TETILLA,8
+jurisdiction_pa_442,l10n_pa_edi.district_pa_58,LA YEGUADA,9
+jurisdiction_pa_443,l10n_pa_edi.district_pa_58,LAS GUIAS,10
+jurisdiction_pa_444,l10n_pa_edi.district_pa_58,MONJARAS,11
+jurisdiction_pa_445,l10n_pa_edi.district_pa_58,SAN JOSE,12
+jurisdiction_pa_446,l10n_pa_edi.district_pa_59,CAÑAZAS (CABECERA),1
+jurisdiction_pa_447,l10n_pa_edi.district_pa_59,AGUA DE SALUD,2
+jurisdiction_pa_448,l10n_pa_edi.district_pa_59,CERRO DE PLATA,3
+jurisdiction_pa_449,l10n_pa_edi.district_pa_59,LOS VALLES,4
+jurisdiction_pa_450,l10n_pa_edi.district_pa_59,SAN MARCELO,5
+jurisdiction_pa_451,l10n_pa_edi.district_pa_60,LA MESA (CABECERA),1
+jurisdiction_pa_452,l10n_pa_edi.district_pa_60,BISVALLES,2
+jurisdiction_pa_453,l10n_pa_edi.district_pa_60,BORO,3
+jurisdiction_pa_454,l10n_pa_edi.district_pa_60,LLANO GRANDE,4
+jurisdiction_pa_455,l10n_pa_edi.district_pa_60,SAN BARTOLO,5
+jurisdiction_pa_456,l10n_pa_edi.district_pa_61,LAS PALMAS,1
+jurisdiction_pa_457,l10n_pa_edi.district_pa_61,CERRO DE CASA,2
+jurisdiction_pa_458,l10n_pa_edi.district_pa_61,COROZAL,3
+jurisdiction_pa_459,l10n_pa_edi.district_pa_61,EL MARIA,4
+jurisdiction_pa_460,l10n_pa_edi.district_pa_61,EL PIRO,5
+jurisdiction_pa_461,l10n_pa_edi.district_pa_61,EL PRADO,6
+jurisdiction_pa_462,l10n_pa_edi.district_pa_61,EL RINCON,7
+jurisdiction_pa_463,l10n_pa_edi.district_pa_61,LOLA,8
+jurisdiction_pa_464,l10n_pa_edi.district_pa_61,PIXVAE,9
+jurisdiction_pa_465,l10n_pa_edi.district_pa_61,PUERTO VIDAL,10
+jurisdiction_pa_466,l10n_pa_edi.district_pa_61,ZAPOTILLO,11
+jurisdiction_pa_467,l10n_pa_edi.district_pa_62,MONTIJO (CABECERA),1
+jurisdiction_pa_468,l10n_pa_edi.district_pa_62,ARENAS,2
+jurisdiction_pa_469,l10n_pa_edi.district_pa_62,GOBERNADORA,3
+jurisdiction_pa_470,l10n_pa_edi.district_pa_62,LA GARCEANA,4
+jurisdiction_pa_471,l10n_pa_edi.district_pa_62,LEONES,5
+jurisdiction_pa_472,l10n_pa_edi.district_pa_62,LLANO DE CATIVAL,6
+jurisdiction_pa_473,l10n_pa_edi.district_pa_62,PILON,7
+jurisdiction_pa_474,l10n_pa_edi.district_pa_62,QUEBRO,8
+jurisdiction_pa_475,l10n_pa_edi.district_pa_62,TEBARIO,9
+jurisdiction_pa_476,l10n_pa_edi.district_pa_63,RIO DE JESUS (CABECERA),1
+jurisdiction_pa_477,l10n_pa_edi.district_pa_63,LAS HUACAS,2
+jurisdiction_pa_478,l10n_pa_edi.district_pa_63,LOS CASTILLOS,3
+jurisdiction_pa_479,l10n_pa_edi.district_pa_63,UTIRA,4
+jurisdiction_pa_480,l10n_pa_edi.district_pa_64,SAN FRANCISCO (CABECERA),1
+jurisdiction_pa_481,l10n_pa_edi.district_pa_64,CORRAL FALSO,2
+jurisdiction_pa_482,l10n_pa_edi.district_pa_64,LOS HATILLOS,3
+jurisdiction_pa_483,l10n_pa_edi.district_pa_64,REMANCE,4
+jurisdiction_pa_484,l10n_pa_edi.district_pa_64,SAN JUAN,5
+jurisdiction_pa_485,l10n_pa_edi.district_pa_65,SANTA FE (CABECERA),1
+jurisdiction_pa_486,l10n_pa_edi.district_pa_65,CALOVEBORA,2
+jurisdiction_pa_487,l10n_pa_edi.district_pa_65,EL ALTO,3
+jurisdiction_pa_488,l10n_pa_edi.district_pa_65,EL CUAY,4
+jurisdiction_pa_489,l10n_pa_edi.district_pa_65,EL PANTANO,5
+jurisdiction_pa_490,l10n_pa_edi.district_pa_65,GATUNCITO,6
+jurisdiction_pa_491,l10n_pa_edi.district_pa_66,SANTIAGO (CABECERA),1
+jurisdiction_pa_492,l10n_pa_edi.district_pa_66,LA COLORADA,2
+jurisdiction_pa_493,l10n_pa_edi.district_pa_66,LA PEÑA,3
+jurisdiction_pa_494,l10n_pa_edi.district_pa_66,LA RAYA DE SANTA MARIA,4
+jurisdiction_pa_495,l10n_pa_edi.district_pa_66,PONUGA,5
+jurisdiction_pa_496,l10n_pa_edi.district_pa_66,SAN PEDRO DEL ESPINO,6
+jurisdiction_pa_497,l10n_pa_edi.district_pa_67,SONA (CABECERA),1
+jurisdiction_pa_498,l10n_pa_edi.district_pa_67,BAHIA HONDA,2
+jurisdiction_pa_499,l10n_pa_edi.district_pa_67,CALIDONIA,3
+jurisdiction_pa_500,l10n_pa_edi.district_pa_67,CATIVE,4
+jurisdiction_pa_501,l10n_pa_edi.district_pa_67,EL MARANON,5
+jurisdiction_pa_502,l10n_pa_edi.district_pa_67,GUARUMAL,6
+jurisdiction_pa_503,l10n_pa_edi.district_pa_67,LA SOLEDAD,7
+jurisdiction_pa_504,l10n_pa_edi.district_pa_67,QUEBRADA DE ORO,8
+jurisdiction_pa_505,l10n_pa_edi.district_pa_67,RIO GRANDE,9
+jurisdiction_pa_506,l10n_pa_edi.district_pa_67,RODEO VIEJO,10
+jurisdiction_pa_507,l10n_pa_edi.district_pa_68,AILIGANDI,1
+jurisdiction_pa_508,l10n_pa_edi.district_pa_68,NARGANA,2
+jurisdiction_pa_509,l10n_pa_edi.district_pa_68,PUERTO OBALDIA,3
+jurisdiction_pa_510,l10n_pa_edi.district_pa_68,TUBUALA,4
+jurisdiction_pa_511,l10n_pa_edi.district_pa_55,ARNULFO ARIAS,1
+jurisdiction_pa_512,l10n_pa_edi.district_pa_55,BELISARIO FRIAS,2
+jurisdiction_pa_513,l10n_pa_edi.district_pa_55,OMAR TORRIJOS,3
+jurisdiction_pa_514,l10n_pa_edi.district_pa_55,RUFINA ALFARO,4
+jurisdiction_pa_515,l10n_pa_edi.district_pa_53,ALCALDE DIAZ,
+jurisdiction_pa_516,l10n_pa_edi.district_pa_53,CAIMITILLO,
+jurisdiction_pa_517,l10n_pa_edi.district_pa_53,ERNESTO CORDOBA CAMPOS,
+jurisdiction_pa_518,l10n_pa_edi.district_pa_53,LAS MAÑANITAS,
+jurisdiction_pa_519,l10n_pa_edi.district_pa_21,LOS ALGARROBOS,
+jurisdiction_pa_520,l10n_pa_edi.district_pa_45,CAMBUTAL,
+jurisdiction_pa_521,l10n_pa_edi.district_pa_45,ISLA DE CAÑAS,
+jurisdiction_pa_522,l10n_pa_edi.district_pa_6,LAS LOMAS,
+jurisdiction_pa_523,l10n_pa_edi.district_pa_6,LLANO NORTE,
+jurisdiction_pa_524,l10n_pa_edi.district_pa_53,24 DE DICIEMBRE,
+jurisdiction_pa_525,l10n_pa_edi.district_pa_3,RAMBALA,
+jurisdiction_pa_526,l10n_pa_edi.district_pa_66,CANTO DEL LLANO,
+jurisdiction_pa_527,l10n_pa_edi.district_pa_41,LA VILLA DE LOS SANTOS,
+jurisdiction_pa_528,l10n_pa_edi.district_pa_66,LOS ALGARROBOS,
+jurisdiction_pa_529,l10n_pa_edi.district_pa_69,CIRILO GUAYNORA,
+jurisdiction_pa_530,l10n_pa_edi.district_pa_69,LAJAS BLANCAS,
+jurisdiction_pa_531,l10n_pa_edi.district_pa_69,MANUEL ORTEGA,
+jurisdiction_pa_532,l10n_pa_edi.district_pa_70,JINGURUNDÍ,
+jurisdiction_pa_533,l10n_pa_edi.district_pa_70,RÍO SABALO,
+jurisdiction_pa_534,l10n_pa_edi.district_pa_41,AGUA BUENA,
+jurisdiction_pa_535,l10n_pa_edi.district_pa_66,CARLOS SANTANA AVILA,
+jurisdiction_pa_536,l10n_pa_edi.district_pa_32,LLANO BONITO,
+jurisdiction_pa_537,l10n_pa_edi.district_pa_32,SAN JUAN BAUTISTA,
+jurisdiction_pa_538,l10n_pa_edi.district_pa_71,SOLOY,
+jurisdiction_pa_539,l10n_pa_edi.district_pa_71,BOCA DE BALSA,
+jurisdiction_pa_540,l10n_pa_edi.district_pa_71,CERRO BANCO,
+jurisdiction_pa_541,l10n_pa_edi.district_pa_71,CERRO PATERNA,
+jurisdiction_pa_542,l10n_pa_edi.district_pa_71,CAMARON ARRIBA,
+jurisdiction_pa_543,l10n_pa_edi.district_pa_71,EMPLANADA DE CHORCHA,
+jurisdiction_pa_544,l10n_pa_edi.district_pa_71,NAMNONI,
+jurisdiction_pa_545,l10n_pa_edi.district_pa_71,NIBA,
+jurisdiction_pa_546,l10n_pa_edi.district_pa_72,BISIRA,
+jurisdiction_pa_547,l10n_pa_edi.district_pa_72,KANKINTU,
+jurisdiction_pa_548,l10n_pa_edi.district_pa_72,GUORONI,
+jurisdiction_pa_549,l10n_pa_edi.district_pa_72,MUNUNI,
+jurisdiction_pa_550,l10n_pa_edi.district_pa_72,PIEDRA ROJA,
+jurisdiction_pa_551,l10n_pa_edi.district_pa_72,CALANTE,
+jurisdiction_pa_552,l10n_pa_edi.district_pa_72,TOLETE,
+jurisdiction_pa_553,l10n_pa_edi.district_pa_73,KUSAPIN,
+jurisdiction_pa_554,l10n_pa_edi.district_pa_73,BAHIA AZUL,
+jurisdiction_pa_555,l10n_pa_edi.district_pa_73,CAÑAVERAL,
+jurisdiction_pa_556,l10n_pa_edi.district_pa_73,RIO CHIRIQUI,
+jurisdiction_pa_557,l10n_pa_edi.district_pa_73,TOBOBE,
+jurisdiction_pa_558,l10n_pa_edi.district_pa_74,HATO PILON,
+jurisdiction_pa_559,l10n_pa_edi.district_pa_74,CASCABEL,
+jurisdiction_pa_560,l10n_pa_edi.district_pa_74,HATO CULANTRO,
+jurisdiction_pa_561,l10n_pa_edi.district_pa_74,HATO JOBO,
+jurisdiction_pa_562,l10n_pa_edi.district_pa_74,HATO JULI,
+jurisdiction_pa_563,l10n_pa_edi.district_pa_74,QUEBRADA DE LORO,
+jurisdiction_pa_564,l10n_pa_edi.district_pa_74,SALTO DUPI,
+jurisdiction_pa_565,l10n_pa_edi.district_pa_75,CHICHICA,
+jurisdiction_pa_566,l10n_pa_edi.district_pa_75,BAGAMA,
+jurisdiction_pa_567,l10n_pa_edi.district_pa_75,CERRO CAÑA,
+jurisdiction_pa_568,l10n_pa_edi.district_pa_75,CERRO PUERCO,
+jurisdiction_pa_569,l10n_pa_edi.district_pa_75,KRUA,
+jurisdiction_pa_570,l10n_pa_edi.district_pa_75,MARACA,
+jurisdiction_pa_571,l10n_pa_edi.district_pa_75,NIBRA,
+jurisdiction_pa_572,l10n_pa_edi.district_pa_75,PEÑA BLANCA,
+jurisdiction_pa_573,l10n_pa_edi.district_pa_75,ROKA,
+jurisdiction_pa_574,l10n_pa_edi.district_pa_75,SITIO PRADO,
+jurisdiction_pa_575,l10n_pa_edi.district_pa_75,UMANI,
+jurisdiction_pa_576,l10n_pa_edi.district_pa_75,DIKO,
+jurisdiction_pa_577,l10n_pa_edi.district_pa_75,KIKARI,
+jurisdiction_pa_578,l10n_pa_edi.district_pa_75,MREENI,
+jurisdiction_pa_579,l10n_pa_edi.district_pa_76,CERRO IGLESIAS,
+jurisdiction_pa_580,l10n_pa_edi.district_pa_76,LAJERO,
+jurisdiction_pa_581,l10n_pa_edi.district_pa_76,HATO CHAMI,
+jurisdiction_pa_582,l10n_pa_edi.district_pa_76,SUSAMA,
+jurisdiction_pa_583,l10n_pa_edi.district_pa_76,JADABERI,
+jurisdiction_pa_584,l10n_pa_edi.district_pa_77,BUENOS AIRES,
+jurisdiction_pa_585,l10n_pa_edi.district_pa_77,AGUA DE SALUD,
+jurisdiction_pa_586,l10n_pa_edi.district_pa_77,ALTO DE JESUS,
+jurisdiction_pa_587,l10n_pa_edi.district_pa_77,CERRO PELADO,
+jurisdiction_pa_588,l10n_pa_edi.district_pa_77,EL BALE,
+jurisdiction_pa_589,l10n_pa_edi.district_pa_77,EL PAREDON,
+jurisdiction_pa_590,l10n_pa_edi.district_pa_77,EL PIRO,
+jurisdiction_pa_591,l10n_pa_edi.district_pa_77,GUAYABITO,
+jurisdiction_pa_592,l10n_pa_edi.district_pa_77,GUIBALE,
+jurisdiction_pa_593,l10n_pa_edi.district_pa_77,EL PEÑON,
+jurisdiction_pa_594,l10n_pa_edi.district_pa_77,EL PIRO No 2,
+jurisdiction_pa_595,l10n_pa_edi.district_pa_78,SAMBOA,
+jurisdiction_pa_596,l10n_pa_edi.district_pa_78,BURI,
+jurisdiction_pa_597,l10n_pa_edi.district_pa_78,GUARIVIARA,
+jurisdiction_pa_598,l10n_pa_edi.district_pa_78,MAN CREEK,
+jurisdiction_pa_599,l10n_pa_edi.district_pa_78,TUWAL,
+jurisdiction_pa_600,l10n_pa_edi.district_pa_79,SANTA CATALINA O CALOVEBORA,
+jurisdiction_pa_601,l10n_pa_edi.district_pa_79,ALTO BILINGUE,
+jurisdiction_pa_602,l10n_pa_edi.district_pa_79,LOMA YUCA,
+jurisdiction_pa_603,l10n_pa_edi.district_pa_79,SAN PEDRITO,
+jurisdiction_pa_604,l10n_pa_edi.district_pa_79,VALLE BONITO,
+jurisdiction_pa_605,l10n_pa_edi.district_pa_80,ARRAIJAN,
+jurisdiction_pa_606,l10n_pa_edi.district_pa_80,BURUNGA,
+jurisdiction_pa_607,l10n_pa_edi.district_pa_80,CERRO SILVESTRE,
+jurisdiction_pa_608,l10n_pa_edi.district_pa_80,JUAN DEMOSTENES AROSEMENA,
+jurisdiction_pa_609,l10n_pa_edi.district_pa_80,NUEVO EMPERADOR,
+jurisdiction_pa_610,l10n_pa_edi.district_pa_80,SANTA CLARA,
+jurisdiction_pa_611,l10n_pa_edi.district_pa_80,VERACRUZ,
+jurisdiction_pa_612,l10n_pa_edi.district_pa_80,VISTA ALEGRE,
+jurisdiction_pa_613,l10n_pa_edi.district_pa_81,CAPIRA,
+jurisdiction_pa_614,l10n_pa_edi.district_pa_81,CAIMITO,
+jurisdiction_pa_615,l10n_pa_edi.district_pa_81,CAMPANA,
+jurisdiction_pa_616,l10n_pa_edi.district_pa_81,CERMEÑO,
+jurisdiction_pa_617,l10n_pa_edi.district_pa_81,CIRI DE LOS SOTOS,
+jurisdiction_pa_618,l10n_pa_edi.district_pa_81,CIRI GRANDE,
+jurisdiction_pa_619,l10n_pa_edi.district_pa_81,EL CACAO,
+jurisdiction_pa_620,l10n_pa_edi.district_pa_81,LA TRINIDAD,
+jurisdiction_pa_621,l10n_pa_edi.district_pa_81,LAS OLLAS ARRIBA,
+jurisdiction_pa_622,l10n_pa_edi.district_pa_81,LIDICE,
+jurisdiction_pa_623,l10n_pa_edi.district_pa_81,VILLA CARMEN,
+jurisdiction_pa_624,l10n_pa_edi.district_pa_81,VILLA ROSARIO,
+jurisdiction_pa_625,l10n_pa_edi.district_pa_81,SANTA ROSA,
+jurisdiction_pa_626,l10n_pa_edi.district_pa_82,CHAME,
+jurisdiction_pa_627,l10n_pa_edi.district_pa_82,BEJUCO,
+jurisdiction_pa_628,l10n_pa_edi.district_pa_82,BUENOS AIRES,
+jurisdiction_pa_629,l10n_pa_edi.district_pa_82,CABUYA,
+jurisdiction_pa_630,l10n_pa_edi.district_pa_82,CHICA,
+jurisdiction_pa_631,l10n_pa_edi.district_pa_82,EL LIBANO,
+jurisdiction_pa_632,l10n_pa_edi.district_pa_82,LAS LAJAS,
+jurisdiction_pa_633,l10n_pa_edi.district_pa_82,NUEVA GORGONA,
+jurisdiction_pa_634,l10n_pa_edi.district_pa_82,PUNTA CHAME,
+jurisdiction_pa_635,l10n_pa_edi.district_pa_82,SAJALICES,
+jurisdiction_pa_636,l10n_pa_edi.district_pa_82,SORA,
+jurisdiction_pa_637,l10n_pa_edi.district_pa_83,BARRIO BALBOA,
+jurisdiction_pa_638,l10n_pa_edi.district_pa_83,BARRIO COLON,
+jurisdiction_pa_639,l10n_pa_edi.district_pa_83,AMADOR,
+jurisdiction_pa_640,l10n_pa_edi.district_pa_83,AROSEMENA,
+jurisdiction_pa_641,l10n_pa_edi.district_pa_83,EL ARADO,
+jurisdiction_pa_642,l10n_pa_edi.district_pa_83,EL COCO,
+jurisdiction_pa_643,l10n_pa_edi.district_pa_83,FEUILLET,
+jurisdiction_pa_644,l10n_pa_edi.district_pa_83,GUADALUPE,
+jurisdiction_pa_645,l10n_pa_edi.district_pa_83,HERRERA,
+jurisdiction_pa_646,l10n_pa_edi.district_pa_83,HURTADO,
+jurisdiction_pa_647,l10n_pa_edi.district_pa_83,ITURRALDE,
+jurisdiction_pa_648,l10n_pa_edi.district_pa_83,LA REPRESA,
+jurisdiction_pa_649,l10n_pa_edi.district_pa_83,LOS DIAZ,
+jurisdiction_pa_650,l10n_pa_edi.district_pa_83,MENDOZA,
+jurisdiction_pa_651,l10n_pa_edi.district_pa_83,OBALDIA,
+jurisdiction_pa_652,l10n_pa_edi.district_pa_83,PLAYA LEONA,
+jurisdiction_pa_653,l10n_pa_edi.district_pa_83,PUERTO CAIMITO,
+jurisdiction_pa_654,l10n_pa_edi.district_pa_83,SANTA RITA,
+jurisdiction_pa_655,l10n_pa_edi.district_pa_84,SAN CARLOS,
+jurisdiction_pa_656,l10n_pa_edi.district_pa_84,EL ESPINO,
+jurisdiction_pa_657,l10n_pa_edi.district_pa_84,EL HIGO,
+jurisdiction_pa_658,l10n_pa_edi.district_pa_84,GUAYABITO,
+jurisdiction_pa_659,l10n_pa_edi.district_pa_84,LA ERMITA,
+jurisdiction_pa_660,l10n_pa_edi.district_pa_84,LA LAGUNA,
+jurisdiction_pa_661,l10n_pa_edi.district_pa_84,LAS UVAS,
+jurisdiction_pa_662,l10n_pa_edi.district_pa_84,LOS LLANITOS,
+jurisdiction_pa_663,l10n_pa_edi.district_pa_84,SAN JOSE,
+jurisdiction_pa_664,l10n_pa_edi.district_pa_2,EL EMPALME,
+jurisdiction_pa_665,l10n_pa_edi.district_pa_16,PUERTO ARMUELLES,
+jurisdiction_pa_666,l10n_pa_edi.district_pa_16,BACO,
+jurisdiction_pa_667,l10n_pa_edi.district_pa_16,RODOLFO AGUILAR DELGADO,
+jurisdiction_pa_668,l10n_pa_edi.district_pa_19,LA CONCEPCION,
+jurisdiction_pa_669,l10n_pa_edi.district_pa_28,LA PALMA,
+jurisdiction_pa_670,l10n_pa_edi.district_pa_28,METETI,
+jurisdiction_pa_671,l10n_pa_edi.district_pa_53,DON BOSCO,
+jurisdiction_pa_672,l10n_pa_edi.district_pa_85,NUEVA CALIFORNIA,
+jurisdiction_pa_673,l10n_pa_edi.district_pa_85,CUESTA DE PIEDRA,
+jurisdiction_pa_674,l10n_pa_edi.district_pa_85,PASO ANCHO,
+jurisdiction_pa_675,l10n_pa_edi.district_pa_85,VOLCAN,
+jurisdiction_pa_676,l10n_pa_edi.district_pa_85,CERRO PUNTA,
+jurisdiction_pa_677,l10n_pa_edi.district_pa_61,SAN MARTIN DE PORRES,
+jurisdiction_pa_678,l10n_pa_edi.district_pa_66,SAN MARTIN DE PORRES,
+jurisdiction_pa_679,l10n_pa_edi.district_pa_86,RIO IGLESIAS,
+jurisdiction_pa_680,l10n_pa_edi.district_pa_57,SAN ANTONIO,
+jurisdiction_pa_681,l10n_pa_edi.district_pa_47,ANCON,
+jurisdiction_pa_682,l10n_pa_edi.district_pa_20,DAVID SUR,

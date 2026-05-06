@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="l10n_pa_edi_partner_extra_data_form" model="ir.ui.view">
+            <field name="name">l10n_pa_edi.res.partner.extra_data.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="900"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="required">l10n_pa_edi_customer_type in ['01','03']</attribute>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position='replace'>
+                    <span class="o_form_label o_td_label" name="vat">
+                        <p>Tax ID</p>
+                    </span>
+                    <div class="o_row">
+                        <field
+                                name="vat"
+                                placeholder="Ej: 155596724-2-2015 / Ej: 8-123-456"
+                                readonly="parent_id != False"
+                                required="l10n_pa_edi_customer_type in ['01','03']"
+                                nolabel="1"
+                        />
+                        <field
+                                name="l10n_pa_edi_dv"
+                                placeholder="DV number"
+                                string="DV"
+                                class="oe_inline"
+                                required="l10n_pa_edi_customer_type in ['01','03']"
+                                invisible="country_code != 'PA'"/>
+                        <button
+                                name="check_ruc"
+                                icon="fa-arrow-right"
+                                type="object"
+                                class="oe_inline"
+                                invisible="country_code != 'PA'">
+                            <span>
+                                Check
+                            </span>
+                        </button>
+                    </div>
+                    <field name="l10n_pa_edi_checked" invisible="1" readonly="1"/>
+                    <field name="l10n_pa_edi_customer_type" />
+                </xpath>
+                <field name="state_id" position="replace">
+                    <field name="state_id" placeholder="State"
+                           options="{'no_open': True, 'no_quick_create': True, 'no_create': True, 'no_create_edit': True}"
+                           readonly="type == 'contact' and parent_id != False" required="l10n_pa_edi_customer_type in ['01','03']"/>
+                    <field name="district_id" placeholder="District"
+                           options="{'no_open': True, 'no_quick_create': True, 'no_create': True, 'no_create_edit': True}"
+                           readonly="type == 'contact' and parent_id != False" required="l10n_pa_edi_customer_type in ['01','03']"/>
+                    <field name="jurisdiction_id" placeholder="Jurisdiction"
+                           options="{'no_open': True, 'no_quick_create': True, 'no_create': True, 'no_create_edit': True}"
+                           readonly="type == 'contact' and parent_id != False" required="l10n_pa_edi_customer_type in ['01','03']"/>
+                </field>
+                <field name="city" position="replace">
+                    <field name="city" invisible="1"/>
+                </field>
+                <field name="zip" position="replace">
+                    <field name="zip" invisible="1"/>
+                </field>
+                <xpath expr="//sheet//group//group" position="inside">
+                    <field name="l10n_pa_edi_tipo_identificacion"
+                           invisible="l10n_pa_edi_customer_type != '04'"
+                           required="l10n_pa_edi_customer_type == '04'"/>
+
+                    <field name="l10n_pa_edi_nro_identificacion_extranjero"
+                           invisible="l10n_pa_edi_customer_type != '04'"
+                           required="l10n_pa_edi_customer_type == '04'"/>
+
+                    <field name="l10n_pa_edi_paisextranjero"
+                           invisible="l10n_pa_edi_customer_type != '04'"
+                           required="l10n_pa_edi_customer_type == '04'"/>
+
+                    <field name="l10n_pa_edi_tipo_contribuyente"/>
+                    <field name="l10n_pa_edi_codigoubicacion"
+                           placeholder="Ej: 8-8-9  (máx. 8 chars)"
+                           required="l10n_pa_edi_customer_type in ('01','03')"/>
+                </xpath>
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Electronic Invoice ( PA )" name="extra_data" invisible="country_code != 'PA'" >
+                        <group>
+                            <group>
+
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <field name="country_id" position="attributes">
+                    <attribute name="can_create">False</attribute>
+                </field>
+
+
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>
