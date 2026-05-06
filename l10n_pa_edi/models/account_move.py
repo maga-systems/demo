@@ -749,8 +749,8 @@ class AccountMove(models.Model):
             folio_number = self.l10n_pa_no_doc_factura
             punto_facturacion = self._l10n_pa_edi_get_punto(self)
         else:
+            # Fallback: folio no fue pre-reservado (ej. action_certificate sin draft)
             folio_number, punto_facturacion = self._l10n_pa_edi_get_serie_and_folio(self)
-            self.sudo().write({'l10n_pa_no_doc_factura': folio_number})
         datos_transaccion = {
             "tipoEmision": data_def_company['tipoemision'],
             "tipoDocumento": tipoDocumento,
@@ -812,6 +812,13 @@ class AccountMove(models.Model):
         self.qr_img = img_str
 
     @api.model
+    def _reserve_folio(self, folio_number):
+        """Persiste el folio fuera de la transacción principal para sobrevivir rollbacks."""
+        with self.pool.cursor() as new_cr:
+            new_env = api.Environment(new_cr, SUPERUSER_ID, self.env.context)
+            new_env['account.move'].browse(self.id).write({'l10n_pa_no_doc_factura': folio_number})
+            new_cr.commit()
+
     def create_log(self, vals):
         with self.pool.cursor() as new_cr:
             new_env = api.Environment(new_cr, SUPERUSER_ID, self.env.context)
@@ -881,54 +888,39 @@ class AccountMove(models.Model):
 
             ws_data = self.l10n_pa_create_dict()
             _logger.info('ws_data Request: %s' % (ws_data))
-            continuar  = False
-            for rang in range(3):
-                if continuar:
-                    break
-                try:
-                    pos_order_id = self.env['pos.order'].search([('name', '=', self.invoice_origin)], limit=1)
-                except:
-                    pos_order_id = False
-                log = self.create_log({
-                    'name': f'FEL - {self.name}',
-                    'type': 'error',
-                    'no_pos_order_id': pos_order_id.id if pos_order_id else False,
-                    'invoice_origin': self.invoice_origin,
-                    'no_pos_order_ref': pos_order_id.pos_reference if pos_order_id else False,
-                    'no_invoiced_id': self.id,
-                    'company_id': self.env.company.id,
-                    'json_send': str(ws_data)
-                })
-                # Esto es por si no se puede enviar la factura, entra en estado contingencia para envio posterior
-                l10n_pa_fel_estado = fields.Selection([
-                    ('pendiente', 'Pendiente'),
-                    ('enviado', 'Enviado'),
-                    ('contingencia', 'Contingencia'),
-                    ('error', 'Error'),
-                ], string="Estado FEL", default='pendiente', copy=False)
-                # commit
-                _logger.info('log: %s' % (log))
-                
-                result = cliente.service.Enviar(**ws_data)
+            try:
+                pos_order_id = self.env['pos.order'].search([('name', '=', self.invoice_origin)], limit=1)
+            except Exception:
+                pos_order_id = False
+            log = self.create_log({
+                'name': f'FEL - {self.name}',
+                'type': 'error',
+                'no_pos_order_id': pos_order_id.id if pos_order_id else False,
+                'invoice_origin': self.invoice_origin,
+                'no_pos_order_ref': pos_order_id.pos_reference if pos_order_id else False,
+                'no_invoiced_id': self.id,
+                'company_id': self.env.company.id,
+                'json_send': str(ws_data)
+            })
+            _logger.info('log: %s' % (log))
+
+            result = cliente.service.Enviar(**ws_data)
+            self.write_log(log.id, {'json_received': str(result)})
+            _logger.info('Enviar Response: %s' % (result))
+
+            if result['codigo'] == '102':
+                folio_dup = ws_data['documento']['datosTransaccion']['numeroDocumentoFiscal']
                 self.write_log(log.id, {
-                    'json_received': str(result)
+                    'type': 'duplicate',
+                    'state': 'done',
+                    'message': 'Folio duplicado en PAC: %s' % folio_dup,
+                    'nodocumentofiscal': folio_dup,
                 })
-                # commit
-                _logger.info('Enviar Response: %s' % (result))
-                if result['codigo'] == '102':
-                    self.write_log(log.id, {
-                        'type': 'warning',
-                        'state': 'done',
-                        'message': str(result['mensaje']),
-                        'nodocumentofiscal': ws_data['documento']['datosTransaccion']['numeroDocumentoFiscal']
-                    })
-                    # commit
-                    # Folio duplicado en PAC: consumir siguiente y reservarlo
-                    folio_number, _pff = self._l10n_pa_edi_get_serie_and_folio(self)
-                    ws_data['documento']['datosTransaccion']['numeroDocumentoFiscal'] = folio_number
-                    self.sudo().write({'l10n_pa_no_doc_factura': folio_number})
-                    continue
-                continuar = True
+                raise UserError(
+                    "El número de documento %s ya está registrado en el PAC (código 102).\n\n"
+                    "Vuelva a intentar — se asignará el siguiente número disponible de la secuencia."
+                    % folio_dup
+                )
             # Se imprime la respuesta a la solicitud del servicio
             if result['resultado'] == 'error':
                 # usar cr  para crear un log usando consulta sql
