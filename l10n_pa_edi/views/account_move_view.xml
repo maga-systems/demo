@@ -70,6 +70,12 @@
                 </group>
             </xpath>
 
+            <!-- Tax required on invoice lines when FEL is active -->
+            <xpath expr="//field[@name='invoice_line_ids']//field[@name='tax_ids']" position="attributes">
+                <attribute name="required">parent.l10n_pa_use_cfe and parent.move_type in ('out_invoice', 'out_refund')</attribute>
+                <attribute name="optional">show</attribute>
+            </xpath>
+
             <!-- QR visual -->
             <xpath expr="//h1//field[@name='name']" position="after">
                 <link rel="stylesheet"
@@ -261,6 +267,7 @@
         <field name="inherit_id" ref="account.view_out_invoice_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//list" position="inside">
+                <field name="l10n_pa_no_doc_factura" string="No. Fiscal" optional="show"/>
                 <field name="l10n_pa_edi_status" widget="badge"/>
             </xpath>
             <xpath expr="//field[@name='l10n_pa_edi_status']" position="attributes">

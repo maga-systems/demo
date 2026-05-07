@@ -17,6 +17,13 @@ class AccountJournal(models.Model):
         help='PFF de 3 dígitos asignado por la DGI. Ej: 001. '
              'Solo requerido si no usa secuencia global.',
     )
+    l10n_pa_edi_codigo_sucursal = fields.Char(
+        string='Código Sucursal Emisor',
+        size=4,
+        default='0000',
+        help='Código de sucursal de 4 dígitos asignado por la DGI. Ej: 0000.',
+    )
+
     l10n_pa_edi_sequence_id = fields.Many2one(
         'ir.sequence',
         string='Secuencia FEL (Facturas)',

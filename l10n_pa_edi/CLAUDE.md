@@ -950,8 +950,8 @@ No requiere acceso técnico al código. Agregar un PAC nuevo = crear un registro
     <field name="name">The Factory HKA</field>
     <field name="code">thefactoryhka</field>
     <field name="country_id" ref="base.pa"/>
-    <field name="wsdl_testing_url"><!-- URL real de HKA testing --></field>
-    <field name="wsdl_prod_url"><!-- URL real de HKA producción --></field>
+    <field name="wsdl_testing_url">https://demoemision.thefactoryhka.com.pa/ws/obj/v1.0/Service.svc</field>
+    <field name="wsdl_prod_url">https://emision.thefactoryhka.com.pa/ws/obj/v1.0/Service.svc</field>
 </record>
 ```
 

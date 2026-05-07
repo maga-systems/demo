@@ -10,6 +10,22 @@ _logger = logging.getLogger(__name__)
 def post_init_hook(env):
     _load_unspsc_codes(env)
     _load_sequence_factura(env)
+    _rename_tax_groups(env)
+
+
+def _rename_tax_groups(env):
+    """Renombra grupos de impuestos de l10n_pa para que muestren 'Impuestos'
+    en lugar del nombre técnico (ej: 'ITBMS 7%') en los totales de factura."""
+    rename_map = {
+        'ITBMS 7%': 'Impuestos',
+        'ITBMS 10%': 'Impuestos (10%)',
+        'ITBMS 15%': 'Impuestos (15%)',
+    }
+    for old_name, new_name in rename_map.items():
+        groups = env['account.tax.group'].search([('name', '=', old_name)])
+        if groups:
+            groups.write({'name': new_name})
+            _logger.info("l10n_pa_edi: renombrado grupo de impuesto '%s' → '%s'", old_name, new_name)
 
 
 def _load_sequence_factura(env):

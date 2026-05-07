@@ -11,6 +11,10 @@
                       invisible="type != 'sale'">
 
                     <group string="Configuración FEL">
+                        <field name="l10n_pa_edi_codigo_sucursal"
+                               placeholder="Ej: 0001  (4 dígitos)"
+                               help="Código de sucursal emisor asignado por la DGI. Se usa en el envío y descarga de documentos del PAC."/>
+
                         <field name="l10n_pa_edi_use_global_sequence"/>
                         <field name="l10n_pa_edi_punto_facturacion"
                                invisible="l10n_pa_edi_use_global_sequence == True"
@@ -23,7 +27,7 @@
                                required="l10n_pa_edi_use_global_sequence == False"/>
                     </group>
 
-                    <div class="alert alert-info"
+                    <div class="alert alert-info" role="status"
                          invisible="l10n_pa_edi_use_global_sequence == False">
                         <p>
                             Este diario usa la <strong>secuencia global de la empresa</strong>
@@ -32,7 +36,7 @@
                         </p>
                     </div>
 
-                    <div class="alert alert-success"
+                    <div class="alert alert-success" role="status"
                          invisible="l10n_pa_edi_use_global_sequence == True">
                         <p>
                             Este diario usa su <strong>propia secuencia FEL</strong>.

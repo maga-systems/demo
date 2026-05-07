@@ -304,20 +304,26 @@ class AccountMove(models.Model):
         }
 
     def _data_x_dowload_pdf_xml(self):
-        
         wsdl = self.get_wsdl()
         tokenempresa, tokenPassword = self.get_tokens()
+
+        punto = self._l10n_pa_edi_get_punto(self)
+
+        if self.move_type == 'out_refund':
+            tipo_doc = '04' if (self.reversed_entry_id and self.reversed_entry_id.l10n_pa_dgi_cufe) else '06'
+        else:
+            tipo_doc = '01'
+
         data = {
             "tokenEmpresa": tokenempresa,
             "tokenPassword": tokenPassword,
             "datosDocumento": {
-                "codigoSucursalEmisor": "0000",
+                "codigoSucursalEmisor": self._l10n_pa_edi_get_codigo_sucursal(self),
                 "numeroDocumentoFiscal": self.l10n_pa_no_doc_factura,
-                "puntoFacturacionFiscal": "001",
-                "tipoDocumento": "01",
+                "puntoFacturacionFiscal": punto,
+                "tipoDocumento": tipo_doc,
                 "tipoEmision": "01",
-                "serialDispositivo": "",
-            }
+            },
         }
         # Verifica que el endpoint este disponible
         parsed_url = urlparse(wsdl)
@@ -341,19 +347,19 @@ class AccountMove(models.Model):
                     move.l10n_pa_invoice_pdf = res['documento']
                     return True
                 else:
-                    raise UserError('Error al descargar el PDF de la factura')
+                    raise UserError('PAC DescargaPDF código %s: %s' % (res.get('codigo'), res.get('mensaje')))
             except Exception as e:
-                log = self.env['log.fel.pan'].create({
-                    'name': f'FEL - {move.name}',
+                move.create_log({
+                    'name': 'FEL PDF - %s' % move.name,
                     'state': 'done',
                     'type': 'error_file',
                     'no_invoiced_id': move.id,
-                    'message': e,
+                    'message': str(e),
                     'nodocumentofiscal': move.l10n_pa_no_doc_factura,
-                    'json_received': 'Error al descargar el PDF de la factura'
+                    'json_received': 'Error al descargar el PDF de la factura',
                 })
-                # commit
-                
+                raise
+
     def dowload_l10n_pa_edit_xml(self):
         for move in self:
             try:
@@ -364,17 +370,18 @@ class AccountMove(models.Model):
                     move.l10n_pa_invoice_xml_text = base64.b64decode(res['documento']).decode('utf-8')
                     return True
                 else:
-                    raise UserError('Error al descargar el PDF de la factura')
+                    raise UserError('PAC DescargaXML código %s: %s' % (res.get('codigo'), res.get('mensaje')))
             except Exception as e:
-                log = self.env['log.fel.pan'].create({
-                    'name': f'FEL - {move.name}',
+                move.create_log({
+                    'name': 'FEL XML - %s' % move.name,
                     'state': 'done',
                     'type': 'error_file',
                     'no_invoiced_id': move.id,
-                    'message': e,
+                    'message': str(e),
                     'nodocumentofiscal': move.l10n_pa_no_doc_factura,
-                    'json_received': 'Error al descargar el XML de la factura'
+                    'json_received': 'Error al descargar el XML de la factura',
                 })
+                raise
                 
     def _get_l10n_pa_edi_issued_address(self):
         self.ensure_one()
@@ -749,7 +756,6 @@ class AccountMove(models.Model):
             folio_number = self.l10n_pa_no_doc_factura
             punto_facturacion = self._l10n_pa_edi_get_punto(self)
         else:
-            # Fallback: folio no fue pre-reservado (ej. action_certificate sin draft)
             folio_number, punto_facturacion = self._l10n_pa_edi_get_serie_and_folio(self)
         datos_transaccion = {
             "tipoEmision": data_def_company['tipoemision'],
@@ -785,7 +791,7 @@ class AccountMove(models.Model):
             tokenEmpresa=tokenempresa,
             tokenPassword=tokenPassword,
             documento=dict(
-                codigoSucursalEmisor="0000",
+                codigoSucursalEmisor=self._l10n_pa_edi_get_codigo_sucursal(self),
                 tipoSucursal="1",
                 datosTransaccion=datos_transaccion,
                 listaItems=product_list,
@@ -811,13 +817,32 @@ class AccountMove(models.Model):
         img_str = base64.b64encode(buffer.getvalue())
         self.qr_img = img_str
 
-    @api.model
-    def _reserve_folio(self, folio_number):
-        """Persiste el folio fuera de la transacción principal para sobrevivir rollbacks."""
-        with self.pool.cursor() as new_cr:
-            new_env = api.Environment(new_cr, SUPERUSER_ID, self.env.context)
-            new_env['account.move'].browse(self.id).write({'l10n_pa_no_doc_factura': folio_number})
-            new_cr.commit()
+    def _get_pending_folio(self, move):
+        """Devuelve el folio del último intento no-exitoso / no-duplicado, si existe.
+
+        Usa cursor independiente para ver los registros comprometidos por create_log()
+        fuera de la transacción principal (que puede haber hecho rollback).
+        Un SELECT vía cursor separado NO adquiere bloqueo sobre account_move,
+        por lo que no genera el error de serialización de PostgreSQL.
+
+        Retorna el folio (str) o None si no hay intento previo reutilizable.
+        """
+        with self.env.registry.cursor() as new_cr:
+            new_cr.execute(
+                """
+                SELECT nodocumentofiscal
+                  FROM log_fel_pan
+                 WHERE no_invoiced_id = %s
+                   AND type NOT IN ('success', 'duplicate')
+                   AND nodocumentofiscal IS NOT NULL
+                   AND nodocumentofiscal != ''
+                 ORDER BY id DESC
+                 LIMIT 1
+                """,
+                [str(move.id)],
+            )
+            row = new_cr.fetchone()
+            return row[0] if row else None
 
     def create_log(self, vals):
         with self.pool.cursor() as new_cr:
@@ -844,6 +869,23 @@ class AccountMove(models.Model):
             #res = super()._post(soft=soft)
             ##CNUEVO##
             if not context.get('is_not_post',False):
+                # Asignar folio FEL para cada factura.
+                # Si existe un intento previo fallido (error no-102), reutilizar el
+                # mismo folio: el log.fel.pan lo persiste aunque la transacción principal
+                # haya hecho rollback.  En caso de 102 (duplicado) o primer intento,
+                # avanzar al siguiente número de la secuencia.
+                # IMPORTANTE: el folio se escribe solo en la tx principal (ORM),
+                # nunca en cursor separado, para evitar errores de serialización PG.
+                for move in self:
+                    if not (move.l10n_pa_use_cfe and move.move_type in ('out_invoice', 'out_refund')):
+                        continue
+                    pending = self._get_pending_folio(move)
+                    if pending:
+                        folio_number = pending
+                    else:
+                        folio_number, _punto = move._l10n_pa_edi_get_serie_and_folio(move)
+                    move.l10n_pa_no_doc_factura = folio_number
+
                 #  Forzar escritura de pagos y plazos
                 self.env.flush_all()
                 # Auto-crear pago DGI por defecto si la factura no tiene ninguno
@@ -892,6 +934,7 @@ class AccountMove(models.Model):
                 pos_order_id = self.env['pos.order'].search([('name', '=', self.invoice_origin)], limit=1)
             except Exception:
                 pos_order_id = False
+            folio_enviado = ws_data['documento']['datosTransaccion']['numeroDocumentoFiscal']
             log = self.create_log({
                 'name': f'FEL - {self.name}',
                 'type': 'error',
@@ -900,7 +943,10 @@ class AccountMove(models.Model):
                 'no_pos_order_ref': pos_order_id.pos_reference if pos_order_id else False,
                 'no_invoiced_id': self.id,
                 'company_id': self.env.company.id,
-                'json_send': str(ws_data)
+                'json_send': str(ws_data),
+                # Persistir el folio aquí para que sobreviva un rollback de la tx principal.
+                # _get_pending_folio() lo leerá en el siguiente reintento.
+                'nodocumentofiscal': folio_enviado,
             })
             _logger.info('log: %s' % (log))
 
@@ -956,8 +1002,14 @@ class AccountMove(models.Model):
                 self.put_qr_image()
                 self.l10n_pa_edi_status = 'process'
                 self.message_post(body=_("Electronic Invoice created successfully"))
-                self.dowload_l10n_pa_edit_pdf()
-                self.dowload_l10n_pa_edit_xml()
+                try:
+                    self.dowload_l10n_pa_edit_pdf()
+                except Exception as e:
+                    _logger.warning("FEL: fallo descarga PDF para %s: %s", self.name, e)
+                try:
+                    self.dowload_l10n_pa_edit_xml()
+                except Exception as e:
+                    _logger.warning("FEL: fallo descarga XML para %s: %s", self.name, e)
                 return res
         except ConnectionError:
             # No hay internet → marcar como contingencia
@@ -1090,6 +1142,11 @@ class AccountMove(models.Model):
                     'sticky': True,
                 }
             }
+
+    @api.model
+    def _l10n_pa_edi_get_codigo_sucursal(self, move):
+        """Retorna codigoSucursalEmisor configurado en el diario."""
+        return (move.journal_id.l10n_pa_edi_codigo_sucursal or '0000').zfill(4)
 
     @api.model
     def _l10n_pa_edi_get_punto(self, move):

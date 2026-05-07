@@ -319,7 +319,7 @@ class AccountEdiFormat(models.Model):
             tokenEmpresa = tokenempresa,
             tokenPassword = tokenPassword,
             documento=dict(
-            codigoSucursalEmisor="0000",
+            codigoSucursalEmisor=invoice._l10n_pa_edi_get_codigo_sucursal(invoice),
             tipoSucursal="1",
             datosTransaccion=dict({
             "tipoEmision": "01",

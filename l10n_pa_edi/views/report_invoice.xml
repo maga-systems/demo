@@ -322,6 +322,16 @@
             </div>
         </t>
     </xpath>
+    <!-- Referencia de pago: mostrar número DGI en vez del nombre interno de Odoo -->
+    <xpath expr="//p[@name='payment_communication']//span[@t-field='o.payment_reference']" position="replace">
+        <t t-if="o.l10n_pa_use_cfe and o.l10n_pa_no_doc_factura">
+            <span class="fw-bold" t-esc="o.l10n_pa_no_doc_factura"/>
+        </t>
+        <t t-else="">
+            <span class="fw-bold" t-field="o.payment_reference"/>
+        </t>
+    </xpath>
+
     <!-- Fijar ancho de tabla principal -->
     <xpath expr="//table[contains(@class,'o_main_table')]" position="attributes">
         <attribute name="style">table-layout: fixed; width: 100%;</attribute>
@@ -496,7 +506,7 @@
                     <t t-set="base_15"      t-value="sum(l.price_subtotal for l in prod_lines if any(int(t.amount) == 15 for t in l.tax_ids))"/>
                     <t t-set="tax_15"       t-value="base_15 * 0.15"/>
 
-                    <div style="margin-top:12px;width:49%">
+                    <div style="margin-top:12px;width:48%">
                         <h6 style="font-size:11px; font-weight:bold; margin-bottom:4px;">Desglose de Impuestos (B/.)</h6>
                         <table style="width:100%; font-size:10px; border-collapse:collapse;">
                             <thead>
